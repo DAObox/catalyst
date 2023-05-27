@@ -1,9 +1,14 @@
-import { type Config } from "tailwindcss";
+/* eslint-disable @typescript-eslint/no-unsafe-call */
+import withMT from "@material-tailwind/react/utils/withMT";
 
-export default {
+export default withMT({
   content: ["./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'green': "#02AB76"
+      }
+    },
   },
   plugins: [],
-} satisfies Config;
+});
