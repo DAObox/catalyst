@@ -7,9 +7,13 @@ export default withMT({
     extend: {
       colors: {
         "green": "#02AB76",
-        "ash": "#94A3B8"
+        "ash": "#94A3B8",
+        "gray": "#101725",
+        "gray-border": "#1E293B"
       }
     },
   },
-  plugins: [],
+  plugins: [
+    require("daisyui")
+  ],
 });

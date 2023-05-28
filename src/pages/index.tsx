@@ -1,3 +1,4 @@
+import DaoCards from "@/components/DaoCards";
 import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
 import type { NextPage } from "next";
@@ -18,8 +19,9 @@ const Home: NextPage = () => {
 				</div>
 				<div className="w-full relative px-2.5 sm:px-0 lg:px-5 xl:px-0 max-w-xs sm:max-w-xl md:max-w-2xl lg:max-w-6xl">
           			<Navbar />
-					<div className="absolute top-32 w-full space-y-10 sm:space-y-14 lg:space-y-20">
+					<div className="absolute top-32 w-full space-y-10 sm:space-y-14">
 						<Hero />
+						<DaoCards />
 					</div>
 				</div>
 			</main>
