@@ -7,13 +7,14 @@ import {
   getDefaultWallets,
   RainbowKitProvider,
 } from '@rainbow-me/rainbowkit';
-import { configureChains, createConfig, WagmiConfig } from 'wagmi';
-import { polygon } from 'wagmi/chains';
+import { configureChains, createConfig, mainnet, WagmiConfig } from 'wagmi';
+import { arbitrum, polygon } from 'wagmi/chains';
 import { alchemyProvider } from 'wagmi/providers/alchemy';
 import { publicProvider } from 'wagmi/providers/public';
+import { useEffect, useState } from "react";
 
 const { chains, publicClient } = configureChains(
-  [polygon],
+  [polygon, mainnet, arbitrum],
   [
     alchemyProvider({ apiKey: process.env.ALCHEMY_ID || "" }),
     publicProvider()
@@ -33,10 +34,14 @@ const wagmiConfig = createConfig({
 })
 
 const MyApp: AppType = ({ Component, pageProps }) => {
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => {
+      setMounted(true);
+  }, []);
   return (
     <WagmiConfig config={wagmiConfig}>
       <RainbowKitProvider chains={chains}>
-      <Component {...pageProps} />
+        {mounted && <Component {...pageProps} />}
       </RainbowKitProvider>
     </WagmiConfig>
   );
