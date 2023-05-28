@@ -1,13 +1,13 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @typescript-eslint/no-unsafe-call */
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
-/* eslint-disable @next/next/no-img-element */
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
 /* eslint-disable @typescript-eslint/no-unsafe-argument */
 import { SearchIcon } from "@heroicons/react/outline";
 import React, { Fragment, useState } from "react";
 import { Listbox, Transition } from '@headlessui/react'
 import { CheckIcon, ChevronDownIcon } from '@heroicons/react/solid'
+import Image from "next/image";
 
 export default function DaoCards() {
 
@@ -54,7 +54,8 @@ export default function DaoCards() {
                                     <Listbox.Button className="relative w-full cursor-default rounded-md py-1.5 pl-3 pr-10 text-left text-gray-900 
                                     bg-gray border-2 border-gray-border sm:text-sm sm:leading-6 text-white hover:cursor-pointer">
                                         <span className="flex items-center space-x-1.5 w-full p-1.5">
-                                            <img src={selected?.icon} alt="" className="h-5 w-5 flex-shrink-0 rounded-full" />
+                                            <Image src={selected?.icon || "/logos/polygon.png"} alt={`${selected?.label || ""} logo`}
+                                                className="flex-shrink-0 rounded-full" width={20} height={20} />
                                             <span className="block">{selected?.label}</span>
                                         </span>
                                         <span className="pointer-events-none absolute inset-y-0 right-0 ml-3 flex items-center pr-2">
@@ -85,7 +86,8 @@ export default function DaoCards() {
                                             {({ selected, active }) => (
                                             <div className="w-full">
                                                 <div className="flex items-center space-x-1">
-                                                <img src={chain.icon} alt="" className="h-5 w-5 flex-shrink-0 rounded-full" />
+                                            <Image src={chain?.icon || "/logos/polygon.png"} alt={`${chain?.label || ""} logo`}
+                                                className="flex-shrink-0 rounded-full" width={20} height={20} />
                                                 <span
                                                     className={classNames(selected ? 'font-semibold' : 'font-normal', 'block w-full')}
                                                 >
