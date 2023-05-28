@@ -12,6 +12,7 @@ import { arbitrum, polygon } from 'wagmi/chains';
 import { alchemyProvider } from 'wagmi/providers/alchemy';
 import { publicProvider } from 'wagmi/providers/public';
 import { useEffect, useState } from "react";
+import { RecoilRoot } from "recoil"
 
 const { chains, publicClient } = configureChains(
   [polygon, mainnet, arbitrum],
@@ -41,7 +42,9 @@ const MyApp: AppType = ({ Component, pageProps }) => {
   return (
     <WagmiConfig config={wagmiConfig}>
       <RainbowKitProvider chains={chains}>
-        {mounted && <Component {...pageProps} />}
+        <RecoilRoot>
+          {mounted && <Component {...pageProps} />}
+        </RecoilRoot>
       </RainbowKitProvider>
     </WagmiConfig>
   );

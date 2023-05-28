@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @typescript-eslint/no-unsafe-argument */
 import { Listbox, Transition } from "@headlessui/react";
@@ -5,8 +6,13 @@ import { CheckIcon, ChevronDownIcon } from "@heroicons/react/solid";
 import Image from "next/image";
 import { chains } from "@/lib/constants";
 import React, { Fragment, useState } from "react";
+import { chainAtom } from "atoms/atoms";
+import { useRecoilState } from "recoil";
 
 export default function ChainsList() {
+    
+    const [, setSelectedChain] = useRecoilState(chainAtom);
+
     function classNames(...classes: any[]) {
         return classes.filter(Boolean).join(" ");
     }
@@ -15,6 +21,7 @@ export default function ChainsList() {
 
     function handleChange(chain: any) {
         setSelected(chain);
+        setSelectedChain(chain?.label);
     }
 
     return (
