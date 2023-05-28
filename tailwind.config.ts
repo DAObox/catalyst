@@ -6,7 +6,8 @@ export default withMT({
   theme: {
     extend: {
       colors: {
-        'green': "#02AB76"
+        "green": "#02AB76",
+        "ash": "#94A3B8"
       }
     },
   },
