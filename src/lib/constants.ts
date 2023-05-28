@@ -19,3 +19,22 @@ export const defaultFilters = [
         icon: "/logos/sort.png"
     }
 ]
+
+export const filters = [
+    {
+        id: "1",
+        label: "Ascending"
+    },
+    {
+        id: "2",
+        label: "Descending"
+    },
+    {
+        id: "3",
+        label: "Volume"
+    },
+    {
+        id: "4",
+        label: "Market Cap"
+    }
+]
