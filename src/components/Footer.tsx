@@ -5,7 +5,7 @@ import daoFooterLogo from "../../public/logos/dao-d.png";
 
 export function Footer() {
     return (
-			<footer className="flex items-center text-white justify-between space-x-2.5 sm:justify-between px-2.5 sm:px-5 py-5">
+			<footer className="flex items-center text-white justify-between space-x-2.5 sm:justify-between pr-7 sm:pr-0 py-5 w-full">
 				<div className="items-center grid-flow-col w-8">
 					<Image
 						src={daoFooterLogo}

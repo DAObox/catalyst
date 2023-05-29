@@ -20,7 +20,7 @@ export default function DaoCards() {
                     <Filters />
                 </div>
             </div>
-            <div className="w-full grid sm:grid-cols-2 lg:grid-cols-3 gap-y-8 sm:gap-y-4 sm:gap-x-2 md:gap-x-4">
+            <div className="w-full grid sm:grid-cols-2 lg:grid-cols-3 gap-y-4 sm:gap-y-2 md:gap-y-4 sm:gap-x-2 md:gap-x-4">
                 <DaoCard />
                 <DaoCard />
                 <DaoCard />
