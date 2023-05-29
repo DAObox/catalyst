@@ -1,9 +1,12 @@
 import { truncate } from "@/lib/functions"
 import Image from "next/image"
+import Link from "next/link"
+import { type DaoCardProps } from "typings/typings"
 
-export default function DaoCard() {
+export default function DaoCard({ href }: DaoCardProps) {
     return(
-        <div className="w-[300px] custom-card sm:w-[285px] md:w-[325px] lg:w-[315px] xl:w-[375px] px-2 py-4 md:p-4 bg-gray rounded-xl card shadow-xl space-y-2.5">
+        <Link href={href} className="w-[300px] custom-card sm:w-[285px] md:w-[325px] lg:w-[315px] xl:w-[375px] px-2 py-4 md:p-4 
+        bg-gray rounded-xl card shadow-xl space-y-2.5">
             <div className="flex items-center space-x-1">
                 <div>
                     <Image src={"/rect.png"} width={22.5} height={22.5} alt="icon" />
@@ -31,6 +34,6 @@ export default function DaoCard() {
                     </div>
                 </div>
             </div>
-        </div>
+        </Link>
     )
 }

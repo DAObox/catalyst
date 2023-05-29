@@ -21,12 +21,12 @@ export default function DaoCards() {
                 </div>
             </div>
             <div className="w-full grid sm:grid-cols-2 lg:grid-cols-3 gap-y-4 sm:gap-y-2 md:gap-y-4 sm:gap-x-2 md:gap-x-4">
-                <DaoCard />
-                <DaoCard />
-                <DaoCard />
-                <DaoCard />
-                <DaoCard />
-                <DaoCard />
+                <DaoCard href={"/daos/dao"} />
+                <DaoCard href={"/daos/dao"} />
+                <DaoCard href={"/daos/dao"} />
+                <DaoCard href={"/daos/dao"} />
+                <DaoCard href={"/daos/dao"} />
+                <DaoCard href={"/daos/dao"} />
             </div>
         </div>
     )
