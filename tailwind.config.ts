@@ -9,7 +9,9 @@ export default withMT({
         "green": "#02AB76",
         "ash": "#94A3B8",
         "gray": "#101725",
-        "gray-border": "#1E293B"
+        "gray-border": "#1E293B",
+        "info-bg": "#070B13",
+        "light-black": "#94A3B8"
       }
     },
   },

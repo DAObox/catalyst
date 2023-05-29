@@ -7,7 +7,7 @@ import { Footer } from "@/components/Footer";
 
 const Home: NextPage = () => {
 	return (
-		<div className="bg-gradient-to-r from-[#1E203C] to-[#11121B] w-full">
+		<div className="bg-gradient-to-r from-[#1E203C] to-[#11121B] w-full overflow-y-scroll overflow-x-clip">
 			<Head>
 				<title>Catalyst</title>
 			</Head>
@@ -23,9 +23,6 @@ const Home: NextPage = () => {
 					<div className="absolute top-32 w-full space-y-10 sm:space-y-14">
 						<Hero />
 						<DaoCards />
-					</div>
-					<div className="w-full absolute bottom-0 inset-x-0">
-						<Footer />
 					</div>
 				</div>
 			</main>

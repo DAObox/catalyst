@@ -31,10 +31,10 @@ export default function ChainsList() {
                     <>
                         <div className="relative">
                             <Listbox.Button
-                                className="text-gray-900 relative w-full cursor-default rounded-md border-2 border-gray-border bg-gray py-1.5 
+                                className="text-gray-900 relative w-fit cursor-default rounded-md border-2 border-gray-border bg-gray py-1.5 
                                     pl-3 pr-10 text-left text-white hover:cursor-pointer sm:text-sm sm:leading-6"
                             >
-                                <span className="flex w-28 items-center space-x-1.5 p-1.5">
+                                <span className="flex w-20 items-center space-x-1.5 p-1.5">
                                     <Image
                                         src={selected?.icon || "/logos/polygon.png"}
                                         alt={`${selected?.label || ""} logo`}
@@ -60,7 +60,7 @@ export default function ChainsList() {
                                 leaveTo="opacity-0"
                             >
                                 <Listbox.Options
-                                    className="absolute z-10 mt-1 max-h-56 w-full overflow-auto rounded-md border-2 border-gray-border
+                                    className="absolute z-10 mt-1 max-h-56 w-fit' overflow-auto rounded-md border-2 border-gray-border
                                     bg-gray py-1 text-base text-white focus:outline-none sm:text-sm"
                                 >
                                     {chains.map((chain) => (
