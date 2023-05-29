@@ -4,6 +4,7 @@ import "@/styles/globals.css";
 import '@rainbow-me/rainbowkit/styles.css';
 
 import {
+  darkTheme,
   getDefaultWallets,
   RainbowKitProvider,
 } from '@rainbow-me/rainbowkit';
@@ -41,7 +42,7 @@ const MyApp: AppType = ({ Component, pageProps }) => {
   }, []);
   return (
     <WagmiConfig config={wagmiConfig}>
-      <RainbowKitProvider chains={chains}>
+      <RainbowKitProvider chains={chains} theme={darkTheme()}>
         <RecoilRoot>
           {mounted && <Component {...pageProps} />}
         </RecoilRoot>

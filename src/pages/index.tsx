@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
 import type { NextPage } from "next";
 import Head from "next/head";
+import { Footer } from "@/components/Footer";
 
 const Home: NextPage = () => {
 	return (
@@ -22,6 +23,9 @@ const Home: NextPage = () => {
 					<div className="absolute top-32 w-full space-y-10 sm:space-y-14">
 						<Hero />
 						<DaoCards />
+					</div>
+					<div className="w-full absolute bottom-0 inset-x-0">
+						<Footer />
 					</div>
 				</div>
 			</main>
