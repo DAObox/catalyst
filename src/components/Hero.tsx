@@ -15,7 +15,7 @@ export default function Hero() {
               <CreateDao />
             </div>
             <div>
-              <Button variant="text" className="text-white px-6 py-4 hover:bg-green">About DAOs</Button>
+              <Button variant="text" className="text-white px-6 py-4 hover:bg-green hover:shadow-lg hover:shadow-[#2196f366]">About DAOs</Button>
             </div>
           </div>
         </div>

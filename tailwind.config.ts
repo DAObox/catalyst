@@ -11,7 +11,8 @@ export default withMT({
         "gray": "#101725",
         "gray-border": "#1E293B",
         "info-bg": "#070B13",
-        "light-black": "#94A3B8"
+        "light-black": "#94A3B8",
+        "ink": "#081229",
       }
     },
   },
