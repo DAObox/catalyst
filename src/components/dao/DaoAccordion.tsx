@@ -52,7 +52,7 @@ export default function DaoAccordion() {
                                 </div>
                             </div>
                             <div>
-                                <p className="text-white font-semibold text-xl">10,000,0000</p>
+                                <p className="text-white font-semibold text-2xl">10,000,0000</p>
                             </div>
                         </div>
                         <div className="flex flex-col items-center justify-center">
@@ -62,7 +62,7 @@ export default function DaoAccordion() {
                                 </div>
                             </div>
                             <div>
-                                <p className="text-white font-semibold text-xl">$2.01</p>
+                                <p className="text-white font-semibold text-2xl">$2.01</p>
                             </div>
                         </div>
                         <div className="flex flex-col items-center justify-center">
@@ -75,7 +75,7 @@ export default function DaoAccordion() {
                                 </div>
                             </div>
                             <div>
-                                <p className="text-white font-semibold text-xl">400,0000</p>
+                                <p className="text-white font-semibold text-2xl">400,0000</p>
                             </div>
                         </div>
                     </div>
