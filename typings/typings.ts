@@ -10,3 +10,9 @@ export interface DaoCardProps {
 export interface DaoTopNavigationProps {
     active: string
 }
+
+export interface DaoAccordionProps {
+    totalSupply: number,
+    price: number,
+    numberMinted: number
+}
