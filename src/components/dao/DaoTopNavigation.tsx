@@ -23,7 +23,7 @@ export default function DaoTopNavigation({ active }: DaoTopNavigationProps) {
                     <Link href={"?page=members"} className={`hover:text-green ${active === "members" && "text-green"}`}>
                         Members
                     </Link>
-                    <Link href={"?page=settings"} className={`hover:text-green ${active === "settings"} && "text-green"`}>
+                    <Link href={"?page=settings"} className={`hover:text-green ${active === "settings" && "text-green"}`}>
                         Settings
                     </Link>
                 </div>                

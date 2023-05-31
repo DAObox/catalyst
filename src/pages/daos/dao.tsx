@@ -10,6 +10,7 @@ import { useRouter } from "next/router";
 
 export default function Dao() {
     const currentPage = useRouter().query.page;
+    console.log(currentPage)
     return (
         <div>
             <Head>

@@ -48,7 +48,7 @@ export default function DaoAccordion() {
                                     <p className="text-lg font-medium text-light-black">Total Supply</p>
                                 </div>
                                 <div>
-                                    <QuestionMarkCircleIcon className="h-5 w-5 text-white" />
+                                    <QuestionMarkCircleIcon className="h-5 w-5 text-white hover:cursor-pointer" />
                                 </div>
                             </div>
                             <div>
@@ -71,7 +71,7 @@ export default function DaoAccordion() {
                                     <p className="text-lg font-medium text-light-black">Total Minted</p>
                                 </div>
                                 <div>
-                                    <QuestionMarkCircleIcon className="h-5 w-5 text-white" />
+                                    <QuestionMarkCircleIcon className="h-5 w-5 text-white hover:cursor-pointer" />
                                 </div>
                             </div>
                             <div>
