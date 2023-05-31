@@ -6,7 +6,7 @@ import {
 import DaoAccordion from "./DaoAccordion";
 import Divider from "../Divider";
 import Proposals from "./Proposals";
-import Filter from "./Filter";
+import DaoFilter from "./DaoFilter";
 
 export default function Dashboard() {
     return (
@@ -62,7 +62,7 @@ export default function Dashboard() {
                     <Proposals />
                 </div>
                 <div className="w-96 bg-gray border border-gray-border h-fit rounded-xl p-5 space-y-3.5">
-                    <Filter />
+                    <DaoFilter />
                 </div>
             </div>
         </div>

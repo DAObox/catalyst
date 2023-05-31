@@ -12,7 +12,7 @@ export default function DaoCards() {
                         <div className="p-2.5 bg-gray border-0">
                             <SearchIcon className="h-6 w-6 text-white" />
                         </div>
-                        <input type="text" placeholder="Search…" className="input input-bordered w-full bg-gray border-0 text-white focus:outline-0" />
+                        <input type="text" placeholder="Search…" className="input input-bordered w-full bg-gray border-0 text-white focus:ring-0 focus:outline-0" />
                     </div>
                 </div>
                 <div className="max-w-fit flex space-x-5">
