@@ -6,3 +6,7 @@ export interface CustomOptionsProps {
 export interface DaoCardProps {
     href: string
 }
+
+export interface DaoTopNavigationProps {
+    active: string
+}
