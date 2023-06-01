@@ -21,7 +21,7 @@ const wagmiConfig = createConfig({
 })
 const ethereumClient = new EthereumClient(wagmiConfig, chains)
 
-const MyApp: AppType = ({ Component, pageProps }: AppType) => {
+const MyApp: AppType = ({ Component, pageProps }) => {
   const [mounted, setMounted] = useState(false);
   useEffect(() => {
       setMounted(true);

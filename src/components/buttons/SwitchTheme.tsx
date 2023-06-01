@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { SunIcon, MoonIcon } from "@heroicons/react/outline";
+import { SunIcon, MoonIcon } from "@heroicons/react/24/outline";
 import { useLocalStorage } from "usehooks-ts";
 
 export const SwitchTheme = () => {

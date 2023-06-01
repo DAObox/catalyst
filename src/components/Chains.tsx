@@ -2,7 +2,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @typescript-eslint/no-unsafe-argument */
 import { Listbox, Transition } from "@headlessui/react";
-import { CheckIcon, ChevronDownIcon } from "@heroicons/react/solid";
+import { CheckIcon, ChevronDownIcon } from "@heroicons/react/24/solid";
 import Image from "next/image";
 import { chains } from "@/lib/constants";
 import React, { Fragment, useState } from "react";

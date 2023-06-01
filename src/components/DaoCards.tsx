@@ -1,4 +1,4 @@
-import { SearchIcon } from "@heroicons/react/outline";
+import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
 import ChainsList from "./Chains";
 import Filters from "./Filter";
 import DaoCard from "./DaoCard";
@@ -10,7 +10,7 @@ export default function DaoCards() {
                 <div className="form-control flex-1">
                     <div className="input-group w-full border-2 border-gray-border rounded-xl flex items-center">
                         <div className="p-2.5 bg-gray border-0">
-                            <SearchIcon className="h-6 w-6 text-white" />
+                            <MagnifyingGlassIcon className="h-6 w-6 text-white" />
                         </div>
                         <input type="text" placeholder="Search…" className="input input-bordered w-full bg-gray border-0 text-white focus:ring-0 focus:outline-0" />
                     </div>

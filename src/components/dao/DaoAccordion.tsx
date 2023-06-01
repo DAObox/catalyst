@@ -6,7 +6,7 @@ import {
     AccordionBody,
     Tooltip
 } from "@material-tailwind/react";
-import { ChevronDownIcon, QuestionMarkCircleIcon } from "@heroicons/react/solid";
+import { ChevronDownIcon, QuestionMarkCircleIcon } from "@heroicons/react/24/solid";
 
 export default function DaoAccordion() {
 

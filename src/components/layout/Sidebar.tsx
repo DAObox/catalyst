@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
+
 import { Cog6ToothIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 import logo from "../../../public/logos/daobox.png";

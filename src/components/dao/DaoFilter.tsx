@@ -3,7 +3,7 @@ import Image from "next/image"
 import Divider from "../Divider"
 import { useRecoilState } from "recoil"
 import { filterProposalsAtom } from "atoms/atoms"
-import { SearchIcon } from "@heroicons/react/solid"
+import { MagnifyingGlassIcon } from "@heroicons/react/24/solid"
 import DaoFilterDropDown from "../dao/DaoFilterDropDown"
 
 export default function DaoFilter() {
@@ -36,7 +36,7 @@ export default function DaoFilter() {
                 <div className="form-control flex-1">
                     <div className="input-group w-full border-2 border-gray-border rounded-xl flex items-center">
                         <div className="px-2.5 py-1.5 bg-gray border-0">
-                            <SearchIcon className="h-6 w-6 text-white" />
+                            <MagnifyingGlassIcon className="h-6 w-6 text-white" />
                         </div>
                         <input type="text" placeholder="Search…" className="input input-bordered w-full bg-gray border-0 text-white focus:ring-0 focus:outline-0" />
                     </div>
