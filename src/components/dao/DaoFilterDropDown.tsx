@@ -31,7 +31,7 @@ export default function DaoFilterDropDown() {
                     <>
                         <div className="relative w-full">
                             <Listbox.Button
-                                className="text-gray-900 relative w-full cursor-default rounded-md border-2 border-gray-border bg-gray py-1.5 
+                                className="text-gray-900 relative w-full cursor-default rounded-md border-2 border-gray-border py-1.5 
                                     pl-3 pr-10 text-left text-white hover:cursor-pointer sm:text-sm sm:leading-6 bg-gray-border"
                             >
                                 <span className="flex w-full items-center space-x-1.5 p-1.5">
