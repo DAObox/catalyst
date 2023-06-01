@@ -9,7 +9,7 @@ export default function DaoCard({ href }: DaoCardProps) {
         bg-gray rounded-xl card shadow-xl space-y-2.5">
             <div className="flex items-center space-x-1">
                 <div>
-                    <Image src={"/rect.png"} width={22.5} height={22.5} alt="icon" />
+                    <Image src={"/logos/rect.png"} width={22.5} height={22.5} alt="icon" />
                 </div>
                 <div>
                     <h1 className="text-2xl font-medium text-white">ENS</h1>

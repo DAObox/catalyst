@@ -1,11 +1,8 @@
 import Image from "next/image";
 import daoboxLogo from "../../public/logos/daobox.png";
-import { ConnectButton } from "@rainbow-me/rainbowkit";
-import { useConnectModal } from "@rainbow-me/rainbowkit";
-import CustomConnectButton from "./buttons/CustomConenctButton";
+import { Web3Button } from "@web3modal/react";
 
 export default function Navbar() {
-    const { openConnectModal } = useConnectModal();
     return (
 		<div className="w-full relative">
 			<div className="w-full flex justify-center absolute top-0 mt-8">
@@ -20,10 +17,8 @@ export default function Navbar() {
 							/>
 						</div>
                         <div>
-                            {
-                                openConnectModal ? <CustomConnectButton /> : <ConnectButton />
-                            }
-                        </div>
+							<Web3Button />
+						</div>
 					</div>
 				</div>
 			</div>			

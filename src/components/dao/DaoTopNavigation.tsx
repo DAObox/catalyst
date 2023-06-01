@@ -1,16 +1,14 @@
 /* eslint-disable @typescript-eslint/restrict-template-expressions */
-import { ConnectButton } from "@rainbow-me/rainbowkit";
-import { useConnectModal } from "@rainbow-me/rainbowkit";
-import CustomConnectButton from "../buttons/CustomConenctButton";
 import Link from "next/link";
 import { type DaoTopNavigationProps } from "typings/typings";
+import { Web3Button, useWeb3Modal } from "@web3modal/react";
 
 export default function DaoTopNavigation({ active }: DaoTopNavigationProps) {
-    const { openConnectModal } = useConnectModal();
+    const { isOpen } = useWeb3Modal();
     return (
         <div className="flex items-center justify-between text-white">
             <div className="flex-1 flex justify-between">
-                <div className={`flex space-x-5 flex-1 justify-center ${!openConnectModal && "ml-40"}`}>
+                <div className={`flex space-x-5 flex-1 justify-center ${isOpen && "ml-40"}`}>
                     <Link href={"/daos/dao"} className={`hover:text-green ${active === "" && "text-green"}`}>
                         Dashboard
                     </Link>
@@ -29,9 +27,7 @@ export default function DaoTopNavigation({ active }: DaoTopNavigationProps) {
                 </div>                
             </div>
             <div className="flex justify-end z-20">
-                {
-                    openConnectModal ? <CustomConnectButton /> : <ConnectButton />
-                }
+                <Web3Button />
             </div>
         </div>
     )
