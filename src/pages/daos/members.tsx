@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/restrict-template-expressions */
 import DaoAppShell from "@/components/dao/DaoAppShell";
 import Image from "next/image"
 import MintTokenButton from "../../components/buttons/MintTokenButton"
@@ -52,27 +53,31 @@ export default function Members() {
                         <ListButton />
                     </div>
                 </div>
-                {
-                    style === "grid" ? (
-                        <div className="w-full grid sm:grid-cols-2 lg:grid-cols-3 gap-y-4 sm:gap-y-2 md:gap-y-4 sm:gap-x-2 md:gap-x-4">
-                            <MemberCardGrid />
-                            <MemberCardGrid />
-                            <MemberCardGrid />
-                            <MemberCardGrid />
-                            <MemberCardGrid />
-                            <MemberCardGrid />
-                        </div>
-                    ) : (
-                        <div className="flex flex-col space-y-5">
-                            <MemberCardList />
-                            <MemberCardList />
-                            <MemberCardList />
-                            <MemberCardList />
-                            <MemberCardList />
-                            <MemberCardList />
-                        </div>
-                    )
-                }
+                <div className={`${style === "grid" && "flex justify-center"}`}>
+                    <div className={`${style === "grid" ? "lg:max-w-[732px]" : "lg:max-w-full"} xl:max-w-full`}>
+                        {
+                            style === "grid" ? (
+                                <div className="w-full grid sm:grid-cols-2 xl:grid-cols-3 gap-y-4 sm:gap-y-2 md:gap-y-4 sm:gap-x-2 md:gap-x-4 lg:gap-8 place-items-center">
+                                    <MemberCardGrid />
+                                    <MemberCardGrid />
+                                    <MemberCardGrid />
+                                    <MemberCardGrid />
+                                    <MemberCardGrid />
+                                    <MemberCardGrid />
+                                </div>
+                            ) : (
+                                <div className="flex flex-col space-y-5 w-full">
+                                    <MemberCardList />
+                                    <MemberCardList />
+                                    <MemberCardList />
+                                    <MemberCardList />
+                                    <MemberCardList />
+                                    <MemberCardList />
+                                </div>
+                            )
+                        }                      
+                    </div>
+                </div>
             </div>
         </DaoAppShell>
     )

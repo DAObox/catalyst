@@ -6,7 +6,7 @@ import { CheckIcon, ChevronDownIcon } from "@heroicons/react/24/solid";
 import Image from "next/image";
 import { chains, defaultFilters, filters } from "@/lib/constants";
 import React, { Fragment, useState } from "react";
-import { filterAtom, memberFilterDropDown } from "atoms/atoms";
+import { memberFilterDropDown } from "atoms/atoms";
 import { useRecoilState } from "recoil";
 
 export default function MembersFilter() {

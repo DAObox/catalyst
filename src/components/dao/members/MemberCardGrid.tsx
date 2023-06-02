@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function MemberCardGrid() {
     return(
-        <div className="w-[300px] sm:w-[285px] md:w-[325px] lg:w-[315px] xl:w-[375px] relative">
+        <div className="w-[300px] sm:w-[285px] md:w-[325px] lg:w-[350px] relative">
             <div className="w-full relative h-fit">
                 <div className="relative w-full h-24 rounded-t-2xl">
                     <Image src={"/cover.png"} layout="fill" objectFit="cover" alt="icon" className="rounded-t-3xl" />
