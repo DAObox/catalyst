@@ -1,10 +1,10 @@
 /* eslint-disable @typescript-eslint/restrict-template-expressions */
 import Image from "next/image"
-import Divider from "../Divider"
+import Divider from "../../Divider"
 import { useRecoilState } from "recoil"
 import { filterProposalsAtom } from "atoms/atoms"
 import { MagnifyingGlassIcon } from "@heroicons/react/24/solid"
-import DaoFilterDropDown from "../dao/DaoFilterDropDown"
+import DaoFilterDropDown from "./DaoFilterDropDown"
 
 export default function DaoFilter() {
     const [filter, setFilter] = useRecoilState(filterProposalsAtom)

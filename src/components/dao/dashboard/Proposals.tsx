@@ -1,5 +1,5 @@
 import { Button } from "@material-tailwind/react";
-import Divider from "../Divider";
+import Divider from "../../Divider";
 import ProposalsCards from "./ProposalCards";
 
 export default function Proposals() {
