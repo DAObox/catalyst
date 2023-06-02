@@ -14,7 +14,7 @@ export default function DaoAppShell({ children, currentPage }: { children: React
                     <SideNavigation />
                 </div>
                 <div className="w-full min-h-screen bg-info-bg flex-1 flex flex-col items-center ml-24 space-y-5">
-                    <div className="w-full relative px-2.5 sm:px-0 lg:px-5 xl:px-0 max-w-xs sm:max-w-xl md:max-w-2xl lg:max-w-6xl space-y-10 pb-24">
+                    <div className="w-full relative px-2.5 sm:px-0 lg:px-5 xl:px-0 max-w-xs sm:max-w-xl md:max-w-2xl lg:max-w-6xl space-y-[59px] pb-24">
                         <div className="mt-6 w-full">
                             <DaoTopNavigation active={currentPage?.toString() || ""} />
                         </div>

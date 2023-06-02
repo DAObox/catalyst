@@ -15,7 +15,7 @@ export default function Members() {
     const style = useRecoilValue(listStyleAtom)
     return(
         <DaoAppShell currentPage="members">
-            <div className="space-y-5">
+            <div>
                 <div className="w-full bg-gray border border-gray-border p-5 rounded-xl flex items-center justify-between">
                     <div className="text-lighter-gray">
                         <div className="flex items-center space-x-2.5">
@@ -34,7 +34,7 @@ export default function Members() {
                         <MintTokenButton />
                     </div>
                 </div>
-                <div className="w-full flex justify-between items-center">
+                <div className="w-full flex justify-between items-center mt-[59px]">
                     <div className="flex items-center max-w-2xl w-full space-x-5">
                         <div className="form-control flex-1">
                             <div className="input-group w-full border-2 border-gray-border rounded-xl flex items-center">
@@ -53,7 +53,7 @@ export default function Members() {
                         <ListButton />
                     </div>
                 </div>
-                <div className={`${style === "grid" && "flex justify-center"}`}>
+                <div className={`${style === "grid" && "flex justify-center"} mt-[49px]`}>
                     <div className={`${style === "grid" ? "lg:max-w-[732px]" : "lg:max-w-full"} xl:max-w-full`}>
                         {
                             style === "grid" ? (
