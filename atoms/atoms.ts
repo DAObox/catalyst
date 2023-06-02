@@ -19,3 +19,13 @@ export const daoFilterDropDown = atom({
     key: "daoFilterDropDown",
     default: ""
 })
+
+export const memberFilterDropDown = atom({
+    key: "memberFilterDropDown",
+    default: ""
+})
+
+export const listStyleAtom = atom({
+    key: "listStyleAtom",
+    default: "grid"
+})
