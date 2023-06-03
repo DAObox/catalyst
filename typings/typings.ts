@@ -29,3 +29,7 @@ export interface VotingPowerProps {
 export interface TokenBalanceProps {
     balance: string
 }
+
+export interface LastTransactionItemProps {
+    type: string
+}

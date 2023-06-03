@@ -1,9 +1,10 @@
 import DaoAppShell from "@/components/dao/DaoAppShell";
+import TreasuryBalanceCard from "@/components/dao/treasury/TreasuryBalanceCard";
 
 export default function Treasury() {
     return(
         <DaoAppShell currentPage="treasury">
-            <h1>Treasury</h1>
+            <TreasuryBalanceCard />
         </DaoAppShell>
     )
 }
