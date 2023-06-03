@@ -16,3 +16,8 @@ export interface DaoAccordionProps {
     price: number,
     numberMinted: number
 }
+
+export interface MembeStatProps {
+    balance: string,
+    power: string
+}
