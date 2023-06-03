@@ -19,7 +19,7 @@ export default function MemberDetailsTab() {
                                 tab.current
                                     ? 'border-green text-green'
                                     : 'border-transparent text-light-gray hover:text-green',
-                                'group inline-flex items-center border-b-2 py-4 px-1 text-sm font-medium hover:cursor-pointer'
+                                'group inline-flex items-center border-b-2 py-4 px-1 text-sm font-medium hover:cursor-pointer hover:border-green'
                             )}
                             onClick={() => setCurrent(tab.name.toLocaleLowerCase())}
                         >
