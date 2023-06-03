@@ -22,6 +22,7 @@ export default withMT({
         "yellow": "#FFF508",
         "trans-green": "#01442F",
         "medium-gray": "#475569",
+        "trans-gray": "#1E293B"
       }
     },
   },

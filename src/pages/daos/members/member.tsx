@@ -1,3 +1,5 @@
+import DelegateButton from "@/components/buttons/DelegateButton";
+import FollowButton from "@/components/buttons/FollowButton";
 import DaoAppShell from "@/components/dao/DaoAppShell";
 import MemberStat from "@/components/dao/members/MemberStat";
 import { truncate, truncateAddress } from "@/lib/functions";
@@ -16,18 +18,26 @@ export default function Member() {
                             <div className="absolute -top-14 w-28 h-28 left-6 rounded-full border-[4px] border-gray">
                                 <Image src={"/avatar.png"} layout="fill" objectFit="cover" alt="icon" className="rounded-full" />
                             </div>
+                            <div className="mt-10 absolute right-8 -top-5">
+                                <MemberStat balance="230" power="230" />
+                            </div>
                             <div className="relative py-12 px-8 space-y-[16px]">
                                 <div className="flex space-x-1.5 items-center mt-6">
                                     <h2 className="text-xl text-lighter-gray">{truncateAddress("0xA3Db2Cb625bAe87D12AD769C47791a04BA1e5b29")}</h2>
                                     <h3 className="text-ash text-lg">@israelrex.lens</h3>
                                 </div>
-                                <div>
-                                    <p className="tex-medium-gray">{truncate("Embrace the revolution, join me on this transformative journey!", 100)}</p>
+                                <div className="w-full flex space-x-10">
+                                    <div className="flex-1">
+                                        <p className="tex-medium-gray">{truncate("Crafting decentralized experiences, bridging creativity with technology. Designing the future of web3, where user empowerment and blockchain innovation merge seamlessly. Embrace the revolution, join me on this transformative journey!", 250)}</p>
+                                    </div>
+                                    <div className="max-w-sm w-full">
+                                        <div className="w-full space-y-4">
+                                            <FollowButton />
+                                            <DelegateButton />
+                                        </div>
+                                    </div>
                                 </div>
-                                <div className="bg-medium-gray w-full h-[1px]" />
-                                <div>
-                                    <MemberStat balance="230" power="230" />
-                                </div>
+                                <div>Hi</div>
                             </div>
                         </div>
                     </div>
