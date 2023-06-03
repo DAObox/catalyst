@@ -21,3 +21,11 @@ export interface MembeStatProps {
     balance: string,
     power: string
 }
+
+export interface VotingPowerProps {
+    power: string
+}
+
+export interface TokenBalanceProps {
+    balance: string
+}

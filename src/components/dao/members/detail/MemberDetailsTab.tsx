@@ -2,6 +2,8 @@ import { currentTabDetail } from "atoms/atoms"
 import { useRecoilState } from "recoil"
 import { tabs } from "@/lib/constants"
 import { classNames } from "@/lib/functions"
+import MemberDetailsCardPost from "./MembersDetailsCardPost"
+import CommentInPostCard from "./CommentInPostCard"
 
 
 export default function MemberDetailsTab() {
@@ -9,7 +11,7 @@ export default function MemberDetailsTab() {
     const [current, setCurrent] = useRecoilState(currentTabDetail)
 
     return (
-        <div>
+        <div className="space-y-5">
             <div className="border-b border-medium-gray">
                 <nav className="-mb-px flex space-x-8" aria-label="Tabs">
                     {tabs(current).map((tab) => (
@@ -34,6 +36,11 @@ export default function MemberDetailsTab() {
                         </div>
                     ))}
                 </nav>
+            </div>
+            <div className="space-y-5">
+                <MemberDetailsCardPost />
+                <div className="bg-gray-border h-[1px] w-full" />
+                <CommentInPostCard />
             </div>
         </div>
     )
