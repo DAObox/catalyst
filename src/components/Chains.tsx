@@ -8,14 +8,11 @@ import { chains } from "@/lib/constants";
 import React, { Fragment, useState } from "react";
 import { chainAtom } from "atoms/atoms";
 import { useRecoilState } from "recoil";
+import { classNames } from "@/lib/functions";
 
 export default function ChainsList() {
     
     const [, setSelectedChain] = useRecoilState(chainAtom);
-
-    function classNames(...classes: any[]) {
-        return classes.filter(Boolean).join(" ");
-    }
 
     const [selected, setSelected] = useState(chains[0]);
 

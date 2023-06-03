@@ -1,27 +1,18 @@
 import { currentTabDetail } from "atoms/atoms"
-import { useRecoilState, useRecoilValue } from "recoil"
-import { BuildingOfficeIcon, CreditCardIcon, UserIcon, UsersIcon } from '@heroicons/react/20/solid'
-import { ArrowTrendingUpIcon, FolderIcon } from "@heroicons/react/24/solid"
+import { useRecoilState } from "recoil"
+import { tabs } from "@/lib/constants"
+import { classNames } from "@/lib/functions"
+
 
 export default function MemberDetailsTab() {
 
-    function classNames(...classes: string[]) {
-        return classes.filter(Boolean).join(' ')
-    }
-
-    const [currentTab, setCurrent] = useRecoilState(currentTabDetail)
-
-    const tabs = [
-        { name: 'Activity', icon: ArrowTrendingUpIcon, current: currentTab === 'activity' },
-        { name: 'Proposals', icon: FolderIcon, current: currentTab === 'proposals' },
-        { name: 'Delegates', icon: UsersIcon, current: currentTab === 'delegates' },
-    ]
+    const [current, setCurrent] = useRecoilState(currentTabDetail)
 
     return (
         <div>
             <div className="border-b border-medium-gray">
                 <nav className="-mb-px flex space-x-8" aria-label="Tabs">
-                    {tabs.map((tab) => (
+                    {tabs(current).map((tab) => (
                         <div
                             key={tab.name}
                             className={classNames(

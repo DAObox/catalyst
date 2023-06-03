@@ -1,3 +1,6 @@
+/* eslint-disable react-hooks/rules-of-hooks */
+import { ArrowTrendingUpIcon, FolderIcon, UsersIcon } from "@heroicons/react/24/solid"
+
 export const chains = [
     { id: "1", label: "Ethereum", icon: "/logos/polygon.png" },
     { id: "3", label: "Polygon", icon: "/logos/polygon.png" },
@@ -38,3 +41,11 @@ export const filters = [
         label: "Market Cap"
     }
 ]
+
+export function tabs(currentTab: string) {
+    return [
+        { name: 'Activity', icon: ArrowTrendingUpIcon, current: currentTab === 'activity' },
+        { name: 'Proposals', icon: FolderIcon, current: currentTab === 'proposals' },
+        { name: 'Delegates', icon: UsersIcon, current: currentTab === 'delegates' },
+    ]
+}

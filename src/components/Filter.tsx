@@ -8,14 +8,11 @@ import { chains, defaultFilters, filters } from "@/lib/constants";
 import React, { Fragment, useState } from "react";
 import { filterAtom } from "atoms/atoms";
 import { useRecoilState } from "recoil";
+import { classNames } from "@/lib/functions";
 
 export default function Filters() {
 
     const [, setSelectedFilter] = useRecoilState(filterAtom);
-
-    function classNames(...classes: any[]) {
-        return classes.filter(Boolean).join(" ");
-    }
 
     const [selected, setSelected] = useState(defaultFilters[0]);
 

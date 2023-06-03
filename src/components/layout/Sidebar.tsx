@@ -11,10 +11,7 @@ import {
 } from "@heroicons/react/24/outline";
 import { getWindow } from "../../lib/window";
 import Link from "next/link";
-
-export function classNames(...classes: string[]) {
-  return classes.filter(Boolean).join(" ");
-}
+import { classNames } from "@/lib/functions";
 
 const navigation = [
   {
