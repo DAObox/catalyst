@@ -29,3 +29,8 @@ export const listStyleAtom = atom({
     key: "listStyleAtom",
     default: "grid"
 })
+
+export const currentTabDetail = atom({
+    key: "currentTabDetail",
+    default: "activity"
+})

@@ -2,6 +2,7 @@ import DelegateButton from "@/components/buttons/DelegateButton";
 import FollowButton from "@/components/buttons/FollowButton";
 import DaoAppShell from "@/components/dao/DaoAppShell";
 import MemberStat from "@/components/dao/members/MemberStat";
+import MemberDetailsTab from "@/components/dao/members/detail/MemberDetailsTab";
 import { truncate, truncateAddress } from "@/lib/functions";
 import Image from "next/legacy/image";
 
@@ -60,7 +61,9 @@ export default function Member() {
                                         </div>
                                     </div>
                                 </div>
-                                <div>Hi</div>
+                                <div>
+                                    <MemberDetailsTab />
+                                </div>
                             </div>
                         </div>
                     </div>
