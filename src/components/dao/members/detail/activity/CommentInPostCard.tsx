@@ -37,7 +37,7 @@ export default function CommentInPostCard() {
                                 <Dot />
                             </div>
                             <div>
-                                <p className="text-medium-gray text-xs">June 1st</p>
+                                <p className="text-medium-gray text-xs">March 22</p>
                             </div>
                         </div>
                     </div>

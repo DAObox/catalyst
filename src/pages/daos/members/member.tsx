@@ -2,7 +2,7 @@ import DelegateButton from "@/components/buttons/DelegateButton";
 import FollowButton from "@/components/buttons/FollowButton";
 import DaoAppShell from "@/components/dao/DaoAppShell";
 import MemberStat from "@/components/dao/members/MemberStat";
-import MemberDetailsTab from "@/components/dao/members/detail/MemberDetailsTab";
+import MemberDetailsTab from "@/components/dao/members/detail/activity/MemberDetailsTab";
 import { truncate, truncateAddress } from "@/lib/functions";
 import Image from "next/legacy/image";
 

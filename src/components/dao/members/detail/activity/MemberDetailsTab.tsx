@@ -2,9 +2,9 @@ import { currentTabDetail } from "atoms/atoms"
 import { useRecoilState } from "recoil"
 import { tabs } from "@/lib/constants"
 import { classNames } from "@/lib/functions"
-import MemberDetailsCardPost from "./MembersDetailsCardPost"
-import CommentInPostCard from "./CommentInPostCard"
-
+import Activity from "../Activity"
+import Proposals from "../Proposals"
+import Delegates from "../Delegates"
 
 export default function MemberDetailsTab() {
 
@@ -37,10 +37,10 @@ export default function MemberDetailsTab() {
                     ))}
                 </nav>
             </div>
-            <div className="space-y-5">
-                <MemberDetailsCardPost />
-                <div className="bg-gray-border h-[1px] w-full" />
-                <CommentInPostCard />
+            <div>
+                {
+                    current === "activity" ? <Activity /> : current === "proposals" ? <Proposals /> : <Delegates />
+                }
             </div>
         </div>
     )
