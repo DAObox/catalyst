@@ -33,3 +33,7 @@ export interface TokenBalanceProps {
 export interface LastTransactionItemProps {
     type: string
 }
+
+export interface CopyButtonProps {
+    data: string
+}

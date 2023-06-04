@@ -16,7 +16,7 @@ export default function ProposalsCards() {
                 <p className="text-light-gray text-base">Proposed on: 24th May, 2023</p>
                 <p className="text-light-gray text-base">Published by: <span className="text-green">{truncateAddress("0x4b75F7F56d10D898822A4F2B99b08EF40e5BF7C8")}</span></p>
                 <p className="text-light-gray text-base space-x-2.5">
-                    <Button className="shadow- bg-trans-blue text-blue">Active</Button>
+                    <Button className="shadow-none bg-trans-blue text-blue">Active</Button>
                     <Button className="shaow-none bg-trans-yellow text-yellow">Withdrawal</Button>
                 </p>
             </div>
