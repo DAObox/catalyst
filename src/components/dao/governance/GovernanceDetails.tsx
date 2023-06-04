@@ -44,7 +44,7 @@ export default function GovernanceDetails() {
                         }
                     </p>
                 </div>
-                <button className="text-green" onClick={() => setReadMore(!readMore)}>{readMore ? "Read Less" : "Read More"}</button>
+                <button className="text-green focus:outline-none" onClick={() => setReadMore(!readMore)}>{readMore ? "Read Less" : "Read More"}</button>
             </div>
         </div>
     )

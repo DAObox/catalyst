@@ -37,3 +37,8 @@ export interface LastTransactionItemProps {
 export interface CopyButtonProps {
     data: string
 }
+
+export interface GovernanceStatusItemProps {
+    date: string,
+    type: string
+}

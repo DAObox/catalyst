@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import { truncate, truncateAddress } from "@/lib/functions";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import Link from "next/link";
 import MemberStat from "./MemberStat";
 
