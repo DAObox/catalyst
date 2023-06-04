@@ -6,8 +6,8 @@ import {
 import DaoAccordion from "../../components/dao/dashboard/DaoAccordion";
 import Divider from "../../components/Divider";
 import Proposals from "../../components/dao/dashboard/Proposals";
-import DaoFilter from "../../components/dao/dashboard/DaoFilter";
 import DaoAppShell from "@/components/dao/DaoAppShell";
+import TopDelegates from "@/components/dao/dashboard/TopDelegates";
 
 export default function Dashboard() {
     return (
@@ -64,7 +64,7 @@ export default function Dashboard() {
                         <Proposals />
                     </div>
                     <div className="w-96 bg-gray border border-gray-border h-fit rounded-xl p-5 space-y-3.5">
-                        <DaoFilter />
+                        <TopDelegates />
                     </div>
                 </div>
             </div>

@@ -15,11 +15,6 @@ export const filterProposalsAtom = atom({
     default: ""
 })
 
-export const daoFilterDropDown = atom({
-    key: "daoFilterDropDown",
-    default: ""
-})
-
 export const memberFilterDropDown = atom({
     key: "memberFilterDropDown",
     default: ""
