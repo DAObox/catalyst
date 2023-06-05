@@ -3,25 +3,10 @@ import { Fragment, useState } from "react";
 import {
     Accordion,
     AccordionHeader,
-    AccordionBody
+    AccordionBody,
+    Tooltip
 } from "@material-tailwind/react";
-import { ChevronDownIcon, QuestionMarkCircleIcon } from "@heroicons/react/solid";
-
-
-function Icon({ id, open }: any) {
-    return (
-        <svg
-            xmlns="http://www.w3.org/2000/svg"
-
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            strokeWidth={2}
-        >
-            <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
-        </svg>
-    );
-}
+import { ChevronDownIcon, QuestionMarkCircleIcon } from "@heroicons/react/24/solid";
 
 export default function DaoAccordion() {
 
@@ -48,7 +33,9 @@ export default function DaoAccordion() {
                                     <p className="text-lg font-medium text-light-black">Total Supply</p>
                                 </div>
                                 <div>
-                                    <QuestionMarkCircleIcon className="h-5 w-5 text-white hover:cursor-pointer" />
+                                    <Tooltip content="More Information">
+                                        <QuestionMarkCircleIcon className="h-5 w-5 text-white hover:cursor-pointer" />
+                                    </Tooltip>
                                 </div>
                             </div>
                             <div>
@@ -71,7 +58,9 @@ export default function DaoAccordion() {
                                     <p className="text-lg font-medium text-light-black">Total Minted</p>
                                 </div>
                                 <div>
-                                    <QuestionMarkCircleIcon className="h-5 w-5 text-white hover:cursor-pointer" />
+                                    <Tooltip content="More Information">
+                                        <QuestionMarkCircleIcon className="h-5 w-5 text-white hover:cursor-pointer" />
+                                    </Tooltip>
                                 </div>
                             </div>
                             <div>

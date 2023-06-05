@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
+
 import { Cog6ToothIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 import logo from "../../../public/logos/daobox.png";
@@ -9,10 +11,7 @@ import {
 } from "@heroicons/react/24/outline";
 import { getWindow } from "../../lib/window";
 import Link from "next/link";
-
-export function classNames(...classes: string[]) {
-  return classes.filter(Boolean).join(" ");
-}
+import { classNames } from "@/lib/functions";
 
 const navigation = [
   {

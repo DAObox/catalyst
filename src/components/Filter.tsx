@@ -2,20 +2,17 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @typescript-eslint/no-unsafe-argument */
 import { Listbox, Transition } from "@headlessui/react";
-import { CheckIcon, ChevronDownIcon } from "@heroicons/react/solid";
+import { CheckIcon, ChevronDownIcon } from "@heroicons/react/24/solid";
 import Image from "next/image";
 import { chains, defaultFilters, filters } from "@/lib/constants";
 import React, { Fragment, useState } from "react";
 import { filterAtom } from "atoms/atoms";
 import { useRecoilState } from "recoil";
+import { classNames } from "@/lib/functions";
 
 export default function Filters() {
 
     const [, setSelectedFilter] = useRecoilState(filterAtom);
-
-    function classNames(...classes: any[]) {
-        return classes.filter(Boolean).join(" ");
-    }
 
     const [selected, setSelected] = useState(defaultFilters[0]);
 

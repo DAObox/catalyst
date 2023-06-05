@@ -5,3 +5,7 @@ export function truncate(str: string, length: number) {
 export function truncateAddress(address: string) {
     return address.substring(0, 6) + "..." + address.substring(address.length-6, address.length)
 }
+
+export function classNames(...classes: string[]) {
+    return classes.filter(Boolean).join(" ");
+}
