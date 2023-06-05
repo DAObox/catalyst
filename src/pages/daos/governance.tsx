@@ -2,6 +2,7 @@ import DaoAppShell from "@/components/dao/DaoAppShell";
 import GovernanceDetails from "@/components/dao/governance/GovernanceDetails";
 import GovernanceStatus from "@/components/dao/governance/GovernanceStatus";
 import GovernanceStatusCard from "@/components/dao/governance/GovernanceStatusCard";
+import VoteHorizontalRange from "@/components/dao/governance/VoteHorizontalRange";
 import Voting from "@/components/dao/governance/Voting";
 
 export default function Governance() {
@@ -13,6 +14,7 @@ export default function Governance() {
                     <div className="flex-1 space-y-5">
                         <GovernanceDetails />
                         <Voting />
+                        <VoteHorizontalRange _for={70} against={10} abstain={20} />
                     </div>
                     <div className="max-w-xs w-full">
                         <GovernanceStatus />
