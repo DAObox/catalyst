@@ -42,3 +42,9 @@ export interface GovernanceStatusItemProps {
     date: string,
     type: string
 }
+
+export interface VoteHorizontalRangeProps {
+    _for: number,
+    against: number,
+    abstain: number
+}
