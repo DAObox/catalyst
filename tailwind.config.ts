@@ -4,6 +4,9 @@ import withMT from "@material-tailwind/react/utils/withMT";
 export default withMT({
   content: ["./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
+    fontFamily: {
+      'sans': ['DM Sans', 'sans-serif'],
+    },
     extend: {
       colors: {
         "green": "#02AB76",
