@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-floating-promises */
 import { useState } from "react";
-import { CheckBadgeIcon, ClipboardDocumentCheckIcon } from "@heroicons/react/24/outline";
+import { CheckCircleIcon, ClipboardDocumentCheckIcon } from "@heroicons/react/24/outline";
 import { type CopyButtonProps } from "typings/typings";
 
 export default function CopyButton({ data }: CopyButtonProps ) {
@@ -14,7 +14,7 @@ export default function CopyButton({ data }: CopyButtonProps ) {
             navigator.clipboard.writeText(data)
         }}>
             {
-                copied ? <CheckBadgeIcon className="w-5 h-5 text-green" /> : <ClipboardDocumentCheckIcon className="text-light-black w-5 h-5" />
+                copied ? <CheckCircleIcon className="w-5 h-5 text-green" /> : <ClipboardDocumentCheckIcon className="text-light-black w-5 h-5" />
             }
         </button>
     )

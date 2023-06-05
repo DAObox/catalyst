@@ -29,3 +29,8 @@ export const currentTabDetail = atom({
     key: "currentTabDetail",
     default: "activity"
 })
+
+export const voteAtom = atom({
+    key: "vote",
+    default: ""
+})

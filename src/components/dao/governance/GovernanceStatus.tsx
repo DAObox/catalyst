@@ -11,7 +11,6 @@ export default function GovernanceStatus() {
                 <GovernanceStatusItem date={"Wed, 31st May 06:35 PM UTC+1"} type={"Voting Started"} />
                 <GovernanceStatusItem date={"Wed, 31st May 06:35 PM UTC+1"} type={"Concluded"} />
                 <GovernanceStatusItem date={"Wed, 31st May 06:35 PM UTC+1"} type={"Executed"} />
-
             </div>
         </div>
     )
