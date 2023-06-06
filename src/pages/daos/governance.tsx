@@ -14,7 +14,7 @@ export default function Governance() {
                     <div className="flex-1 space-y-5">
                         <GovernanceDetails />
                         <Voting />
-                        <VoteHorizontalRange _for={70} against={10} abstain={20} />
+                        <VoteHorizontalRange _for={67} against={12} abstain={21} />
                     </div>
                     <div className="max-w-xs w-full">
                         <GovernanceStatus />
