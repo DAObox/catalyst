@@ -42,7 +42,7 @@ export const filters = [
     }
 ]
 
-export function tabs(currentTab: string) {
+export function memberTabs(currentTab: string) {
     return [
         { name: 'Activity', icon: ArrowTrendingUpIcon, current: currentTab === 'activity' },
         { name: 'Proposals', icon: FolderIcon, current: currentTab === 'proposals' },
