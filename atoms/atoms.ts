@@ -34,3 +34,8 @@ export const voteAtom = atom({
     key: "vote",
     default: ""
 })
+
+export const voteTabAtom = atom({
+    key: "voteTab",
+    default: "for"
+})

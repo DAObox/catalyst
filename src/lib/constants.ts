@@ -49,3 +49,11 @@ export function memberTabs(currentTab: string) {
         { name: 'Delegates', icon: UsersIcon, current: currentTab === 'delegates' },
     ]
 }
+
+export function votersTab(tab: string) {
+    return [
+        { name: 'For', current: tab === 'for' },
+        { name: 'Against', current: tab === 'against' },
+        { name: 'Abstain', current: tab === 'abstain' },
+    ]
+}

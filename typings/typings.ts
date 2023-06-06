@@ -48,3 +48,8 @@ export interface VoteHorizontalRangeProps {
     against: number,
     abstain: number
 }
+
+export interface VotersTabProps {
+    tab: { name: string, current: boolean }
+
+}

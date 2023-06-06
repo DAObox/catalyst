@@ -3,9 +3,9 @@ import AddComment from "@/components/dao/governance/AddComment";
 import GovernanceDetails from "@/components/dao/governance/GovernanceDetails";
 import GovernanceStatus from "@/components/dao/governance/GovernanceStatus";
 import GovernanceStatusCard from "@/components/dao/governance/GovernanceStatusCard";
-import VoteHorizontalRange from "@/components/dao/governance/VoteHorizontalRange";
-import Voters from "@/components/dao/governance/Voters";
-import Voting from "@/components/dao/governance/Voting";
+import VoteHorizontalRange from "@/components/dao/governance/voting/VoteHorizontalRange";
+import Voters from "@/components/dao/governance/voting/Voters";
+import Voting from "@/components/dao/governance/voting/Voting";
 
 export default function Governance() {
     return (

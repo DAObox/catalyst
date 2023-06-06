@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/restrict-template-expressions */
 import { type VoteHorizontalRangeProps } from "typings/typings";
-import Dot from "../members/detail/activity/Dot";
+import Dot from "../../members/detail/activity/Dot";
 
 export default function VoteHorizontalRange({ _for, against, abstain }: VoteHorizontalRangeProps) {
     return (
