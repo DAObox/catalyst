@@ -1,4 +1,5 @@
 import DaoAppShell from "@/components/dao/DaoAppShell";
+import AddComment from "@/components/dao/governance/AddComment";
 import GovernanceDetails from "@/components/dao/governance/GovernanceDetails";
 import GovernanceStatus from "@/components/dao/governance/GovernanceStatus";
 import GovernanceStatusCard from "@/components/dao/governance/GovernanceStatusCard";
@@ -15,6 +16,7 @@ export default function Governance() {
                         <GovernanceDetails />
                         <Voting />
                         <VoteHorizontalRange _for={67} against={12} abstain={21} />
+                        <AddComment />
                     </div>
                     <div className="max-w-xs w-full">
                         <GovernanceStatus />
