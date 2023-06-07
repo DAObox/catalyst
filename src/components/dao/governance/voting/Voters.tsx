@@ -13,7 +13,7 @@ export default function Voters() {
             <VotersTab />
             {
                 currentTab === "for" ? (
-                    <div className="w-full max-h-80 overflow-y-scroll space-y-3">
+                    <div className="w-full max-h-80 overflow-y-scroll scrollbar-hide space-y-3">
                         <Voter />
                         <Voter />
                         <Voter />
@@ -21,7 +21,7 @@ export default function Voters() {
                         <Voter />
                     </div>
                 ) : currentTab === "against" ? (
-                    <div className="w-full max-h-80 overflow-y-scroll space-y-3">
+                    <div className="w-full max-h-80 overflow-y-scroll scrollbar-hide space-y-3">
                         <Voter />
                         <Voter />
                         <Voter />
@@ -29,7 +29,7 @@ export default function Voters() {
                         <Voter />
                     </div>
                 ) : (
-                    <div className="w-full max-h-80 overflow-y-scroll space-y-3">
+                    <div className="w-full max-h-80 overflow-y-scroll scrollbar-hide space-y-3">
                         <Voter />
                         <Voter />
                         <Voter />

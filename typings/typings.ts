@@ -51,5 +51,13 @@ export interface VoteHorizontalRangeProps {
 
 export interface VotersTabProps {
     tab: { name: string, current: boolean }
+}
 
+export interface DaoAppShellProps {
+    children: React.ReactNode,
+    currentPage?: string
+}
+
+export interface CreateDaoPageStatusProps {
+    page: number,
 }
