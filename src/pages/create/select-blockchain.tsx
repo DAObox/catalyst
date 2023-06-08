@@ -1,7 +1,7 @@
 import CreateDaoAccordion from "@/components/create-dao/CreateDaoAccordion";
 import CreateDaoAppShell from "@/components/create-dao/CreateDaoAppShell";
 
-export default function CreateDao() {
+export default function SelectBlockchain() {
     return (
         <CreateDaoAppShell>
             <div className="w-full bg-gray border border-gray-border p-10 rounded-xl">

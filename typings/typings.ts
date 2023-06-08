@@ -65,3 +65,7 @@ export interface CreateDaoPageStatusProps {
 export interface CreateDaoStepProps {
     current: boolean
 }
+
+export interface CreateDaoPageStatusRangeProps {
+    page: number
+}

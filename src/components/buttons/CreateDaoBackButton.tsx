@@ -1,5 +1,13 @@
+import { Button } from "@material-tailwind/react";
+import { createDaoStep } from "atoms/atoms";
+import { useRecoilState } from "recoil";
+
 export default function CreateDaoBackButton() {
+    const [step, setStep] = useRecoilState(createDaoStep)
     return(
-        <div>Back</div>
+        <Button onClick={() => {
+            step - 1 !== 0 && setStep(step - 1)
+        }} className="bg-transparent border border-lighter-gray px-5 py-3.5 rounded-xl text-lighter-gray flex items-center gap-3"
+        disabled={step - 1 == 0 ? true : false}>Back</Button>
     )
 }

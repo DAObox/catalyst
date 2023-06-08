@@ -7,7 +7,7 @@ import CreateDaoPageStatus from "./CreateDaoPageStatus";
 import { useRecoilValue } from "recoil";
 import { createDaoStep } from "atoms/atoms";
 import CreateDaoBackButton from "../buttons/CreateDaoBackButton";
-import CreateDaoNextButton from "../buttons/CreateDaoNextButton";
+import CreateDaoNContinueButton from "../buttons/CreateDaoContinueButton";
 
 export default function CreateDaoAppShell({ children }: DaoAppShellProps) {
     const page = useRecoilValue(createDaoStep)
@@ -37,7 +37,7 @@ export default function CreateDaoAppShell({ children }: DaoAppShellProps) {
                                         <CreateDaoBackButton />
                                     </div>
                                     <div>
-                                        <CreateDaoNextButton />
+                                        <CreateDaoNContinueButton />
                                     </div>
                                 </div>
                             </div>
