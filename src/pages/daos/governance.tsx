@@ -3,8 +3,9 @@ import AddComment from "@/components/dao/governance/AddComment";
 import GovernanceDetails from "@/components/dao/governance/GovernanceDetails";
 import GovernanceStatus from "@/components/dao/governance/GovernanceStatus";
 import GovernanceStatusCard from "@/components/dao/governance/GovernanceStatusCard";
-import VoteHorizontalRange from "@/components/dao/governance/VoteHorizontalRange";
-import Voting from "@/components/dao/governance/Voting";
+import VoteHorizontalRange from "@/components/dao/governance/voting/VoteHorizontalRange";
+import Voters from "@/components/dao/governance/voting/Voters";
+import Voting from "@/components/dao/governance/voting/Voting";
 
 export default function Governance() {
     return (
@@ -18,8 +19,9 @@ export default function Governance() {
                         <VoteHorizontalRange _for={67} against={12} abstain={21} />
                         <AddComment />
                     </div>
-                    <div className="max-w-xs w-full">
+                    <div className="max-w-xs w-full space-y-5">
                         <GovernanceStatus />
+                        <Voters />
                     </div>
                 </div>
             </div>

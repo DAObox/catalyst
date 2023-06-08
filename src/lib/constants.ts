@@ -33,10 +33,18 @@ export const filters = [
     }
 ]
 
-export function tabs(currentTab: string) {
+export function memberTabs(currentTab: string) {
     return [
         { name: 'Activity', icon: ArrowTrendingUpIcon, current: currentTab === 'activity' },
         { name: 'Proposals', icon: FolderIcon, current: currentTab === 'proposals' },
         { name: 'Delegates', icon: UsersIcon, current: currentTab === 'delegates' },
+    ]
+}
+
+export function votersTab(tab: string) {
+    return [
+        { name: 'For', current: tab === 'for' },
+        { name: 'Against', current: tab === 'against' },
+        { name: 'Abstain', current: tab === 'abstain' },
     ]
 }
