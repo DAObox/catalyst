@@ -1,5 +1,6 @@
 import CreateDaoAccordion from "@/components/create-dao/CreateDaoAccordion";
 import CreateDaoAppShell from "@/components/create-dao/CreateDaoAppShell";
+import SelectBlockchainTabs from "./SelectBlockchainTabs";
 
 export default function SelectBlockchain() {
     return (
@@ -14,7 +15,7 @@ export default function SelectBlockchain() {
                         </div>
                     </div>
                 </div>
-                <div className="w-full p-5 rounded-lg bg-trans-gray"></div> 
+                <SelectBlockchainTabs />
             </div>
         </CreateDaoAppShell>
     )

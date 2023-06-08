@@ -44,3 +44,8 @@ export const createDaoStep = atom({
     key: "createDaoStep",
     default: 1
 })
+
+export const selectBlockchainTab = atom({
+    key: "selectBlockchainTab",
+    default: "mainnet"
+})
