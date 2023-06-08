@@ -61,3 +61,7 @@ export interface DaoAppShellProps {
 export interface CreateDaoPageStatusProps {
     page: number,
 }
+
+export interface CreateDaoStepProps {
+    current: boolean
+}

@@ -39,3 +39,8 @@ export const voteTabAtom = atom({
     key: "voteTab",
     default: "for"
 })
+
+export const createDaoStep = atom({
+    key: "createDaoStep",
+    default: 1
+})

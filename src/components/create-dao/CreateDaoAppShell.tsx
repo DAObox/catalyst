@@ -4,8 +4,13 @@ import { Footer } from "@/components/Footer";
 import { type DaoAppShellProps } from "typings/typings";
 import CreateDaoTopNavigation from "./CreateDaoTopNavigation";
 import CreateDaoPageStatus from "./CreateDaoPageStatus";
+import { useRecoilValue } from "recoil";
+import { createDaoStep } from "atoms/atoms";
+import CreateDaoBackButton from "../buttons/CreateDaoBackButton";
+import CreateDaoNextButton from "../buttons/CreateDaoNextButton";
 
 export default function CreateDaoAppShell({ children }: DaoAppShellProps) {
+    const page = useRecoilValue(createDaoStep)
     return (
         <div>
             <Head>
@@ -20,13 +25,21 @@ export default function CreateDaoAppShell({ children }: DaoAppShellProps) {
                         <div className="mt-6 w-full">
                             <CreateDaoTopNavigation />
                         </div>
-                        <div className="w-full flex space-x-5">
-                            <div className="w-56 space-y-4">
+                        <div className="w-full flex space-x-10">
+                            <div className="max-w-56 space-y-4">
                                 <h2 className="font-bold text-2xl text-white">Create Your DAO</h2>
-                                <CreateDaoPageStatus page={1} />
+                                <CreateDaoPageStatus page={page} />
                             </div>
-                            <div>
+                            <div className="flex-1 min-h-full space-y-5 flex flex-col justify-between">
                                 {children}
+                                <div className="w-full flex justify-between">
+                                    <div>
+                                        <CreateDaoBackButton />
+                                    </div>
+                                    <div>
+                                        <CreateDaoNextButton />
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
