@@ -1,6 +1,6 @@
 import { currentTabDetail } from "atoms/atoms"
 import { useRecoilState } from "recoil"
-import { tabs } from "@/lib/constants"
+import { memberTabs } from "@/lib/constants"
 import { classNames } from "@/lib/functions"
 import Activity from "../Activity"
 import Proposals from "../Proposals"
@@ -14,7 +14,7 @@ export default function MemberDetailsTab() {
         <div className="space-y-5">
             <div className="border-b border-medium-gray">
                 <nav className="-mb-px flex space-x-8" aria-label="Tabs">
-                    {tabs(current).map((tab) => (
+                    {memberTabs(current).map((tab) => (
                         <div
                             key={tab.name}
                             className={classNames(
