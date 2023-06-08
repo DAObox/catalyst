@@ -1,8 +1,13 @@
 import CreateDaoAccordion from "@/components/create-dao/CreateDaoAccordion";
 import CreateDaoAppShell from "@/components/create-dao/CreateDaoAppShell";
 import SelectBlockchainTabs from "./SelectBlockchainTabs";
+import { useRecoilValue } from "recoil";
+import { selectBlockchainTab } from "atoms/atoms";
+import Mainnet from "@/components/create-dao/Mainnet";
+import Testnet from "@/components/create-dao/Testnet";
 
 export default function SelectBlockchain() {
+    const tab = useRecoilValue(selectBlockchainTab)
     return (
         <CreateDaoAppShell>
             <div className="space-y-10">
@@ -16,6 +21,9 @@ export default function SelectBlockchain() {
                     </div>
                 </div>
                 <SelectBlockchainTabs />
+                {
+                    tab == "mainnet" ? <Mainnet /> : <Testnet />
+                }
             </div>
         </CreateDaoAppShell>
     )
