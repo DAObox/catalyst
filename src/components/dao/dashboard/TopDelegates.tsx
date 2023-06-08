@@ -12,7 +12,13 @@ export default function TopDelegates() {
                     <Divider />
                 </div>
             </div>
-            <div className="divide-y divide-gray-200">
+            <div className="divide-y divide-gray-200 max-h-96 overflow-y-scroll scrollbar-hide">
+                <TopDelegate />
+                <TopDelegate />
+                <TopDelegate />
+                <TopDelegate />
+                <TopDelegate />
+                <TopDelegate />
                 <TopDelegate />
                 <TopDelegate />
                 <TopDelegate />

@@ -2,8 +2,9 @@ import DaoTopNavigation from "@/components/dao/DaoTopNavigation";
 import SideNavigation from "@/components/dao/SideNavigation";
 import Head from "next/head";
 import { Footer } from "@/components/Footer";
+import { type DaoAppShellProps } from "typings/typings";
 
-export default function DaoAppShell({ children, currentPage }: { children: React.ReactNode, currentPage: string }) {
+export default function DaoAppShell({ children, currentPage }: DaoAppShellProps) {
     return (
         <div>
             <Head>
