@@ -1,6 +1,6 @@
 import CreateDaoAccordion from "@/components/create-dao/CreateDaoAccordion";
 import CreateDaoAppShell from "@/components/create-dao/CreateDaoAppShell";
-import SelectBlockchainTabs from "./SelectBlockchainTabs";
+import SelectBlockchainTabs from "../../components/create-dao/SelectBlockchainTabs";
 import { useRecoilValue } from "recoil";
 import { selectBlockchainTab } from "atoms/atoms";
 import Mainnet from "@/components/create-dao/Mainnet";
