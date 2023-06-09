@@ -70,3 +70,7 @@ export interface CreateDaoStepProps {
 export interface CreateDaoPageStatusRangeProps {
     page: number
 }
+
+export interface LinkFieldId {
+    id: number
+}

@@ -1,8 +1,6 @@
-/* eslint-disable @typescript-eslint/no-unsafe-call */
-/* eslint-disable @typescript-eslint/no-unsafe-return */
 import CreateDaoAppShell from "@/components/create-dao/CreateDaoAppShell";
+import LinkFields from "@/components/create-dao/LinkFields";
 import { PlusIcon } from "@heroicons/react/24/solid";
-import { Button } from "@material-tailwind/react";
 import { createDaoStep } from "atoms/atoms";
 import Image from "next/image";
 import { useRef, useState } from "react";
@@ -42,21 +40,8 @@ export default function AboutDao() {
                 <input type="file" className="hidden" ref={ref} onChange={e => e.target.files !== null && setLogo(e.target.files[0])} />
             </div>
             <div>
-                <h2 className="text-2xl font-medium text-lighter-gray">Link <span className="text-light-black">(Optional)</span></h2>
-                <div className="flex items-center space-x-1.5">
-                    <input
-                        type="text"
-                        className="w-48 p-4 mt-2 bg-dark-gray rounded-lg bg-transparent border border-gray-border outline-none placeholder:text-medium-gray"
-                        placeholder="Name"
-                    />
-                    <input
-                        type="text"
-                        className="w-full p-4 mt-2 bg-dark-gray rounded-lg bg-transparent border border-gray-border outline-none placeholder:text-medium-gray"
-                        placeholder="Link"
-                    />
-                </div>
+                <LinkFields />
             </div>
-            <Button className="flex items-center space-x-1 bg-gray"><span>Add More</span> <PlusIcon className="w-5 h-5" /></Button>
         </CreateDaoAppShell>
     )
 }

@@ -49,3 +49,8 @@ export const selectBlockchainTab = atom({
     key: "selectBlockchainTab",
     default: "mainnet"
 })
+
+export const numberOfLinkFields = atom({
+    key: "numberOfLinks",
+    default: 1
+})
