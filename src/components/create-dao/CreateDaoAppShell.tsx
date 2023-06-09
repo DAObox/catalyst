@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/restrict-template-expressions */
 import SideNavigation from "@/components/dao/SideNavigation";
 import Head from "next/head";
 import { Footer } from "@/components/Footer";
@@ -9,7 +10,7 @@ import { createDaoStep } from "atoms/atoms";
 import CreateDaoBackButton from "../buttons/CreateDaoBackButton";
 import CreateDaoNContinueButton from "../buttons/CreateDaoContinueButton";
 
-export default function CreateDaoAppShell({ children }: DaoAppShellProps) {
+export default function CreateDaoAppShell({ children, className }: DaoAppShellProps) {
     const page = useRecoilValue(createDaoStep)
     return (
         <div>
@@ -30,8 +31,10 @@ export default function CreateDaoAppShell({ children }: DaoAppShellProps) {
                                 <h2 className="font-bold text-2xl text-white">Create Your DAO</h2>
                                 <CreateDaoPageStatus page={page} />
                             </div>
-                            <div className="flex-1 min-h-full space-y-5 flex flex-col justify-between">
-                                {children}
+                            <div className="flex-1 min-h-full space-y-10 flex flex-col justify-between">
+                                <div className={`h-full flex-1 ${className}`}>
+                                    {children}
+                                </div>
                                 <div className="w-full flex justify-between">
                                     <div>
                                         <CreateDaoBackButton />

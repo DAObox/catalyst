@@ -6,8 +6,7 @@ export default function AboutDao() {
     const [, setCurrent] = useRecoilState(createDaoStep)
     setCurrent(2)
     return(
-        <CreateDaoAppShell>
-            <div>About Dao</div>
+        <CreateDaoAppShell className="space-y-4">
         </CreateDaoAppShell>
     )
 }
