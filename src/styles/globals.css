@@ -23,3 +23,13 @@
     scrollbar-width: none;
     /* Firefox */
 }
+
+/* Disable arrow up and down buttons on input type number */
+::-webkit-inner-spin-button{
+    -webkit-appearance: none; 
+    margin: 0; 
+}
+::-webkit-outer-spin-button{
+    -webkit-appearance: none; 
+    margin: 0; 
+}
