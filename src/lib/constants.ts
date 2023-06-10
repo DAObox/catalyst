@@ -61,6 +61,7 @@ export function votersTab(tab: string) {
 export const createDaoStepNavigation = [
     "/create-dao/select-blockchain",
     "/create-dao/about-dao",
-    "/create-dao/token",
+    "/create-dao/connect-lens-profile",
+    "/create-dao/setup-superflow",
     "/create-dao/governance"
 ]

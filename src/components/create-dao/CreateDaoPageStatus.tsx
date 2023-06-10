@@ -5,9 +5,9 @@ import Governance from "./steps/Governance";
 import { useRecoilValue } from "recoil";
 import { createDaoStep } from "atoms/atoms";
 import CreateDaoPageStatusRange from "./CreateDaoPageStatusRange";
-import Token from "./steps/Token";
 import { useRouter } from "next/router";
 import { createDaoStepNavigation } from "@/lib/constants";
+import ConnectLensProfile from "./steps/ConnectLensProfile";
 
 export default function CreateDaoPageStatus({ page }: CreateDaoPageStatusProps) {
     const step = useRecoilValue(createDaoStep)
@@ -20,8 +20,8 @@ export default function CreateDaoPageStatus({ page }: CreateDaoPageStatusProps) 
                 <div className="space-y-5">
                     <SelectBlockchain current={step == 1 && router.pathname == createDaoStepNavigation[0] ? true : false} />
                     <AboutDao current={step == 2 && router.pathname == createDaoStepNavigation[1] ? true : false} />
-                    <Token current={step == 3 && router.pathname == createDaoStepNavigation[2] ? true : false} />
-                    <Governance current={step == 4 && router.pathname == createDaoStepNavigation[3] ? true : false} />
+                    <ConnectLensProfile current={step == 3 && router.pathname == createDaoStepNavigation[2] || router.pathname == createDaoStepNavigation[3] ? true : false} />
+                    <Governance current={step == 4 && router.pathname == createDaoStepNavigation[4] ? true : false} />
                 </div>
             </div>
         </div>

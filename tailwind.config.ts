@@ -23,7 +23,8 @@ export default withMT({
         "trans-green": "#01442F",
         "medium-gray": "#475569",
         "trans-gray": "#1E293B",
-        "red": "#CD0000"
+        "red": "#CD0000",
+        "purple": "#8B5CF6"
       }
     },
   },
