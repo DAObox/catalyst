@@ -75,6 +75,12 @@ export interface LinkFieldId {
     id: number
 }
 
+export interface LinkFieldType {
+    name: string,
+    url: string,
+    removed: boolean
+}
+
 export interface BlockchainBlockProps {
     name: string
 }

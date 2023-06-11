@@ -6,6 +6,7 @@
 /* eslint-disable @typescript-eslint/no-unsafe-call */
 
 import { type SetterOrUpdater } from "recoil";
+import { type LinkFieldType } from "typings/typings";
 
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
 export function truncate(str: string, length: number) {
@@ -20,7 +21,7 @@ export function classNames(...classes: string[]) {
     return classes.filter(Boolean).join(" ");
 }
 
-export function createLinkField(initial: number, setLinkFields: SetterOrUpdater<number>) {
+export function createLinkField(initial: number, setLinkFields: SetterOrUpdater<LinkFieldType[]>, linkFields: LinkFieldType[]) {
     initial += 1
     const parent = document.createElement("div")
     parent.className = "flex items-center space-x-1.5"
@@ -40,14 +41,29 @@ export function createLinkField(initial: number, setLinkFields: SetterOrUpdater<
     trashIcon.className = "w-6 h-5"
     trashIcon.src = "/trash.png"
     trashIcon.alt = "trash icon"
-    trashIcon.id = `${initial}`
-    trashIcon.addEventListener("click", (e: { target: { id: any } }) => {
-        document.getElementById(`${e.target.id}-parent`)?.remove()
-    })
+    deleteButton.id = `${initial}`
     deleteButton.appendChild(trashIcon)
     parent.appendChild(nameInput)
     parent.appendChild(linkInput)
     parent.appendChild(deleteButton)
     document.getElementById("link-parent")?.appendChild(parent)
-    setLinkFields(initial)
+    const domLinkInput = document.getElementById(`${initial}-link`) as HTMLInputElement
+    const domNameInput = document.getElementById(`${initial}-name`) as HTMLInputElement
+    deleteButton.addEventListener("click", () => {
+        const newLinkFields = [...linkFields]
+        newLinkFields[initial-1] = { name: domNameInput.value, url: domLinkInput.value, removed: true }
+        setLinkFields(newLinkFields)
+        document.getElementById(`${initial}-parent`)?.remove()
+    })
+    domNameInput?.addEventListener("change", () => {
+        const newLinkFields = [...linkFields]
+        newLinkFields[initial-1] = { name: domNameInput.value, url: domLinkInput.value, removed: false }
+        setLinkFields(newLinkFields)
+    })
+    domLinkInput?.addEventListener("change", () => {
+        const newLinkFields = [...linkFields]
+        newLinkFields[initial-1] = { name: domNameInput.value, url: domLinkInput.value, removed: false }
+        setLinkFields(newLinkFields)
+    })
+    console.log(linkFields)
 }

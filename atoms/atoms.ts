@@ -75,14 +75,9 @@ export const daoLogoUrlAtom = atom({
     default: ""
 })
 
-export const numberOfLinkFields = atom({
-    key: "numberOfLinks",
-    default: 1
-})
-
 export const linkFieldsAtom = atom({
     key: "linkFieldAtom",
-    default: [{ name: "", url: ""}]
+    default: [{ name: "", url: "", removed: false }]
 })
 
 export const createDaoAtom = atom({

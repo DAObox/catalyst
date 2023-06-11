@@ -16,11 +16,9 @@ export default function CreateDaoNContinueButton() {
     const daoName = useRecoilValue(daoNameAtom)
     const daoDescription = useRecoilValue(daoDescriptionAtom)
     const daoLogo = useRecoilValue(daoLogoUrlAtom)
-    const numberOfLinks = useRecoilValue(numberOfLinkFields)
-    const [, setLinkFields] = useRecoilState(linkFieldsAtom)
+    const [daoLinks, setLinkFields] = useRecoilState(linkFieldsAtom)
     const router = useRouter()
     useEffect(() => {
-        const links = []
         switch (step) {
             case 1:
                 if (blockchainName == "") {
@@ -31,15 +29,13 @@ export default function CreateDaoNContinueButton() {
                 }
                 break;
             case 2:
-                for (let i = 0; i < numberOfLinks; i++) {
-                    const nameField: any = document.getElementById(`${i}-name}`)
-                    const linkField: any =document.getElementById(`${i}-link}`)
-                    // {/* Only collect those link fields with at least a name or a url or both */}
-                    // if (nameField?.value !== undefined || linkField?.value !== undefined) {
-                    //     links.push({ name: nameField?.value, url: linkField?.value })
-                    //     setLinkFields(links)
-                    // }
-                }
+                daoLinks.map(link => {
+                    const links = []
+                    if (link.removed == false) {
+                        links.push(link)
+                        setLinkFields(links)
+                    }
+                })
                 if (daoName == "" || daoDescription == "") {
                     setDisabled(true)
                 }
@@ -51,7 +47,7 @@ export default function CreateDaoNContinueButton() {
                 setDisabled(true)
                 break;
         }
-    }, [blockchainName, step, numberOfLinks, daoDescription, daoName, setLinkFields])
+    }, [blockchainName, step, daoLinks, daoDescription, daoName, setLinkFields])
     return (
         <Button onClick={() => step + 1 !== 5 && router.push(createDaoStepNavigation[step] || "")}
             className="bg-green px-5 py-3.5 rounded-xl text-lighter-gray flex items-center gap-3" disabled={disabled}>Continue</Button>

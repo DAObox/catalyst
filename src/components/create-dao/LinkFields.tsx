@@ -3,10 +3,10 @@ import { Button } from "@material-tailwind/react"
 import LinkField from "./LinkField"
 import { createLinkField } from "@/lib/functions"
 import { useRecoilState } from "recoil";
-import { numberOfLinkFields } from "atoms/atoms";
+import { linkFieldsAtom } from "atoms/atoms";
 
 export default function LinkFields() {
-    const [, setLinkFields] = useRecoilState(numberOfLinkFields)
+    const [linkFields, setLinkFields] = useRecoilState(linkFieldsAtom)
     return (
         <div className="space-y-4">
             <div>
@@ -17,7 +17,7 @@ export default function LinkFields() {
             </div>
             <div>
                 <Button
-                    onClick={() => createLinkField(1, setLinkFields)}
+                    onClick={() => createLinkField(linkFields.length, setLinkFields, linkFields)}
                     className="flex items-center space-x-1 bg-gray">
                     <span>Add More</span> <PlusIcon className="w-5 h-5" />
                 </Button >
