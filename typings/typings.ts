@@ -74,3 +74,7 @@ export interface CreateDaoPageStatusRangeProps {
 export interface LinkFieldId {
     id: number
 }
+
+export interface BlockchainBlockProps {
+    name: string
+}

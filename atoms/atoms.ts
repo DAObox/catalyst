@@ -50,7 +50,57 @@ export const selectBlockchainTab = atom({
     default: "mainnet"
 })
 
+export const selectedBlockchainName = atom({
+    key: "selectedBlockchainName",
+    default: ""
+})
+
+export const daoNameAtom = atom({
+    key: "daoName",
+    default: ""
+})
+
+export const daoDescriptionAtom = atom({
+    key: "daoDescriptionAtom",
+    default: ""
+})
+
+export const daoLogoLocalUrlAtom = atom({
+    key: "daoLogoLocalUrlAtom",
+    default: ""
+})
+
+export const daoLogoUrlAtom = atom({
+    key: "daoLogoUrlAtom",
+    default: ""
+})
+
 export const numberOfLinkFields = atom({
     key: "numberOfLinks",
     default: 1
+})
+
+export const linkFieldsAtom = atom({
+    key: "linkFieldAtom",
+    default: [{ name: "", url: ""}]
+})
+
+export const createDaoAtom = atom({
+    key: "createDaoAtom",
+    default: {
+        name: "",
+        description: "",
+        logo: "",
+        followSettings: {
+            currency: "",
+            followAmount: 0,
+            receipient: ""
+        },
+        links: [
+            {
+                name: "",
+                url: ""
+            }
+        ]
+    }
 })
