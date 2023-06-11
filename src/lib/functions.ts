@@ -5,7 +5,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @typescript-eslint/no-unsafe-call */
 
-import { SetterOrUpdater } from "recoil";
+import { type SetterOrUpdater } from "recoil";
 
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
 export function truncate(str: string, length: number) {
@@ -22,7 +22,6 @@ export function classNames(...classes: string[]) {
 
 export function createLinkField(initial: number, setLinkFields: SetterOrUpdater<number>) {
     initial += 1
-    console.log(initial)
     const parent = document.createElement("div")
     parent.className = "flex items-center space-x-1.5"
     parent.id = `${initial}-parent`
