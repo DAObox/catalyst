@@ -4,7 +4,7 @@
 /* eslint-disable @typescript-eslint/no-misused-promises */
 import { createDaoStepNavigation } from "@/lib/constants";
 import { Button } from "@material-tailwind/react";
-import { createDaoStep, daoDescriptionAtom, daoNameAtom, daoLogoUrlAtom, numberOfLinkFields, selectedBlockchainName, linkFieldsAtom } from "atoms/atoms";
+import { createDaoStep, daoDescriptionAtom, daoNameAtom, daoLogoUrlAtom, selectedBlockchainName, linkFieldsAtom, daoLinksAtom } from "atoms/atoms";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { useRecoilState, useRecoilValue } from "recoil";
@@ -16,7 +16,8 @@ export default function CreateDaoNContinueButton() {
     const daoName = useRecoilValue(daoNameAtom)
     const daoDescription = useRecoilValue(daoDescriptionAtom)
     const daoLogo = useRecoilValue(daoLogoUrlAtom)
-    const [daoLinks, setLinkFields] = useRecoilState(linkFieldsAtom)
+    const daoLinks = useRecoilValue(linkFieldsAtom)
+    const [, setLinks] = useRecoilState(daoLinksAtom)
     const router = useRouter()
     useEffect(() => {
         switch (step) {
@@ -33,7 +34,7 @@ export default function CreateDaoNContinueButton() {
                     const links = []
                     if (link.removed == false) {
                         links.push(link)
-                        setLinkFields(links)
+                        setLinks(links)
                     }
                 })
                 if (daoName == "" || daoDescription == "") {
@@ -47,7 +48,7 @@ export default function CreateDaoNContinueButton() {
                 setDisabled(true)
                 break;
         }
-    }, [blockchainName, step, daoLinks, daoDescription, daoName, setLinkFields])
+    }, [blockchainName, step, daoLinks, daoDescription, daoName, setLinks])
     return (
         <Button onClick={() => step + 1 !== 5 && router.push(createDaoStepNavigation[step] || "")}
             className="bg-green px-5 py-3.5 rounded-xl text-lighter-gray flex items-center gap-3" disabled={disabled}>Continue</Button>

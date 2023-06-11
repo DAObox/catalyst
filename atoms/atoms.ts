@@ -80,6 +80,11 @@ export const linkFieldsAtom = atom({
     default: [{ name: "", url: "", removed: false }]
 })
 
+export const daoLinksAtom  = atom({
+    key: "daoLinksAtom",
+    default: [{ name: "", url: "" }]
+})
+
 export const createDaoAtom = atom({
     key: "createDaoAtom",
     default: {
