@@ -74,8 +74,23 @@ export const getCurrency = (blockchain: string, setCurrency: SetterOrUpdater<str
     }
 }
 
-export function setCreateDaoData( blockchainName: string, daoName: string, daoDescription: string, daoLogo: string, links: DaoLinkType[], 
-    currency: string, followAmount: string, fundsRecipient: string, quorum: number, minimumParticipation: number, days: number, 
+export const getCurrencyLogo = (blockchain: string) => {
+    switch (blockchain) {
+        case "Ethereum":
+            return "/logos/ethereum.png"
+        case "Polygn":
+            return "/logos/polygon.png"
+        case "Mumbai":
+            return "/logos/polygon.png"
+        case "Goerli":
+            return "/logos/ethereum.png"
+        default:
+            return ""
+    }
+}
+
+export function setCreateDaoData(blockchainName: string, daoName: string, daoDescription: string, daoLogo: string, links: DaoLinkType[],
+    currency: string, followAmount: string, fundsRecipient: string, quorum: number, minimumParticipation: number, days: number,
     hours: number, minutes: number, earlyExecution: string, voteChange: string, blockchainType: string, setCreateDao: SetterOrUpdater<CreateDaoType>) {
     const createDaoData: CreateDaoType = {
         blockchainName: "",
@@ -112,7 +127,7 @@ export function setCreateDaoData( blockchainName: string, daoName: string, daoDe
     createDaoData.followSettings.followAmount = Number(followAmount)
     createDaoData.followSettings.receipient = fundsRecipient
     createDaoData.governanceSettings.quorum = quorum
-    createDaoData.governanceSettings.minimumParticipation = (minimumParticipation/100) * 100000
+    createDaoData.governanceSettings.minimumParticipation = (minimumParticipation / 100) * 100000
     createDaoData.governanceSettings.days = days
     createDaoData.governanceSettings.hours = hours
     createDaoData.governanceSettings.minutes = minutes
