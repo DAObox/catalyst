@@ -22,6 +22,12 @@ export function classNames(...classes: string[]) {
     return classes.filter(Boolean).join(" ");
 }
 
+export const handleCreateNewField = (linksField: LinkFieldType[], setLinksField: SetterOrUpdater<LinkFieldType[]>) => {
+    const newField = [...linksField]
+    newField.push({ name: "", url: "", removed: false })
+    setLinksField(newField)
+}
+
 export const handleRemoveLink = (linksField: LinkFieldType[], index: number, setLinksField: SetterOrUpdater<LinkFieldType[]>) => {
     const newLinkFields = [...linksField];
     newLinkFields[index] = { name: "", url: "", removed: true };
