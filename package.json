@@ -29,6 +29,9 @@
     "zod": "^3.21.4"
   },
   "devDependencies": {
+    "@babel/core": "^7.22.5",
+    "@babel/preset-env": "^7.22.5",
+    "@babel/preset-react": "^7.22.5",
     "@testing-library/react": "^14.0.0",
     "@types/eslint": "^8.21.3",
     "@types/node": "^18.15.5",
