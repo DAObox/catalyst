@@ -11,18 +11,24 @@ import { type LinkFieldType } from "typings/typings";
 
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
 export function truncate(str: string, length: number) {
-    return str.length > length? str.slice(0, length) + '...' : str;
+    return str.length > length ? str.slice(0, length) + '...' : str;
 }
 
 export function truncateAddress(address: string) {
-    return address.substring(0, 6) + "..." + address.substring(address.length-6, address.length)
+    return address.substring(0, 6) + "..." + address.substring(address.length - 6, address.length)
 }
 
 export function classNames(...classes: string[]) {
     return classes.filter(Boolean).join(" ");
 }
 
-export const handleInputTypeTextChange = (e: React.ChangeEvent<HTMLInputElement>, 
+export const handleRemoveLink = (linksField: LinkFieldType[], index: number, setLinksField: SetterOrUpdater<LinkFieldType[]>) => {
+    const newLinkFields = [...linksField];
+    newLinkFields[index] = { name: "", url: "", removed: true };
+    setLinksField(newLinkFields);
+};
+
+export const handleInputTypeTextChange = (e: React.ChangeEvent<HTMLInputElement>,
     linksField: LinkFieldType[], index: number, setLinksField: SetterOrUpdater<LinkFieldType[]>, setInputValue: Dispatch<SetStateAction<string | undefined>>) => {
     const newLinkFields: any = [...linksField]
     const nameInput = document.getElementById(`${index}-name`) as HTMLInputElement;
