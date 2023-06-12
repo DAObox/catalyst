@@ -85,22 +85,83 @@ export const daoLinksAtom  = atom({
     default: [{ name: "", url: "" }]
 })
 
+export const currencyAtom = atom({
+    key: "currencyAtom",
+    default: ""
+})
+
+export const followAmountAtom = atom({
+    key: "followAmountAtom",
+    default: ""
+})
+
+export const fundsRecipientAtom = atom({
+    key: "fundsRecipientAtom",
+    default: ""
+})
+
+export const quorumAtom = atom({
+    key: "quorumAtom",
+    default: 50
+})
+
+export const minimumParticipationControlAtom = atom({
+    key: "minimumParticipationControlAtom",
+    default: 50
+})
+
+export const daysAtom = atom({
+    key: "daysAtom",
+    default: 0
+})
+
+export const hoursAtom = atom({
+    key: "hoursAtom",
+    default: 0
+})
+
+export const minutesAtom = atom({
+    key: "minutesAtom",
+    default: 0
+})
+
+export const earlyExecutionAtom = atom({
+    key: "earlyExecutionAtom",
+    default: "yes"
+})
+
+export const voteChangeAtom = atom({
+    key: "voteChangeAtom",
+    default: "yes"
+})
+
 export const createDaoAtom = atom({
     key: "createDaoAtom",
     default: {
-        name: "",
+        blockchainName: "",
+        blockchainType: "mainnet",
+        daoName: "",
         description: "",
         logo: "",
-        followSettings: {
-            currency: "",
-            followAmount: 0,
-            receipient: ""
-        },
         links: [
             {
                 name: "",
                 url: ""
             }
-        ]
+        ],
+        followSettings: {
+            currency: "",
+            followAmount: 0,
+            receipient: ""
+        },
+        governanceSettings: {
+            quorum: 0,
+            minimumParticipation: 0,
+            days: 0,
+            hours: 0,
+            minutes: 0,
+            earlyExecution: "yes",
+            voteChange: "yes"
+        }
     }
 })
