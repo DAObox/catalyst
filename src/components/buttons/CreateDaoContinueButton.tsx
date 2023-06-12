@@ -46,7 +46,7 @@ export default function CreateDaoNContinueButton() {
                 break;
             case 2:
                 //setLinks(daoLinks.filter(link => link.removed == false))
-                setLinks(daoLinks.filter(link => link.removed == false && link.name != "" && link.url != ""))
+                setLinks(daoLinks.filter(link => link.removed == false && link.name != "" && link.url != "").map(link => { return { name: link.name, url: link.url } }))
                 if (daoName == "" || daoDescription == "") {
                     setDisabled(true)
                 }
@@ -80,11 +80,11 @@ export default function CreateDaoNContinueButton() {
         quorum, minimumParticipation, days, hours, minutes, earlyExecution, voteChange, setLinks])
     //() => step + 1 !== 5 && step < 3 ? router.push(createDaoStepNavigation[step] || "") : router.push(createDaoStepNavigation[step+1] || "")
     return (
-        <Button onClick={() => step + 1 !== 5 ? router.push(createDaoStepNavigation[step] || "") : 
-        setCreateDaoData(blockchainName, daoName, daoDescription, daoLogo, links, currency, followAmount, fundsRecipient, quorum, 
-            minimumParticipation, days, hours, minutes, earlyExecution, voteChange, blockchainType, setCreateDao)}
-        className="bg-green px-5 py-3.5 rounded-xl text-lighter-gray flex items-center gap-3" disabled={disabled}>
-            { finish ? "Create Dao" : "Continue"}
+        <Button onClick={() => step + 1 !== 5 ? router.push(createDaoStepNavigation[step] || "") :
+            setCreateDaoData(blockchainName, daoName, daoDescription, daoLogo, links, currency, followAmount, fundsRecipient, quorum,
+                minimumParticipation, days, hours, minutes, earlyExecution, voteChange, blockchainType, setCreateDao)}
+            className="bg-green px-5 py-3.5 rounded-xl text-lighter-gray flex items-center gap-3" disabled={disabled}>
+            {finish ? "Create Dao" : "Continue"}
         </Button>
     )
 }
