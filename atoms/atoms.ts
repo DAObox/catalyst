@@ -125,6 +125,16 @@ export const minutesAtom = atom({
     default: 0
 })
 
+export const earlyExecutionAtom = atom({
+    key: "earlyExecutionAtom",
+    default: "yes"
+})
+
+export const voteChangeAtom = atom({
+    key: "voteChangeAtom",
+    default: "yes"
+})
+
 export const createDaoAtom = atom({
     key: "createDaoAtom",
     default: {
