@@ -30,13 +30,7 @@ export default function CreateDaoNContinueButton() {
                 }
                 break;
             case 2:
-                daoLinks.map(link => {
-                    const links = []
-                    if (link.removed == false) {
-                        links.push(link)
-                        setLinks(links)
-                    }
-                })
+                setLinks(daoLinks.filter(link => link.removed == false))
                 if (daoName == "" || daoDescription == "") {
                     setDisabled(true)
                 }
