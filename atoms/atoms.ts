@@ -96,7 +96,7 @@ export const followAmountAtom = atom({
 })
 
 export const fundsRecipientAtom = atom({
-    key: "fundingRecipientAtom",
+    key: "fundsRecipientAtom",
     default: ""
 })
 

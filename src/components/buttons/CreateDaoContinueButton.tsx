@@ -4,7 +4,7 @@
 /* eslint-disable @typescript-eslint/no-misused-promises */
 import { createDaoStepNavigation } from "@/lib/constants";
 import { Button } from "@material-tailwind/react";
-import { createDaoStep, daoDescriptionAtom, daoNameAtom, daoLogoUrlAtom, selectedBlockchainName, linkFieldsAtom, daoLinksAtom } from "atoms/atoms";
+import { createDaoStep, daoDescriptionAtom, daoNameAtom, daoLogoUrlAtom, selectedBlockchainName, linkFieldsAtom, daoLinksAtom, currencyAtom, followAmountAtom, fundsRecipientAtom } from "atoms/atoms";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { useRecoilState, useRecoilValue } from "recoil";
@@ -18,6 +18,9 @@ export default function CreateDaoNContinueButton() {
     const daoLogo = useRecoilValue(daoLogoUrlAtom)
     const daoLinks = useRecoilValue(linkFieldsAtom)
     const [links, setLinks] = useRecoilState(daoLinksAtom)
+    const currency = useRecoilValue(currencyAtom)
+    const followAmount = useRecoilValue(followAmountAtom)
+    const fundsRecipient = useRecoilValue(fundsRecipientAtom)
     const router = useRouter()
     useEffect(() => {
         switch (step) {
@@ -30,8 +33,8 @@ export default function CreateDaoNContinueButton() {
                 }
                 break;
             case 2:
-                setLinks(daoLinks.filter(link => link.removed == false))
-                console.log(links)
+                //setLinks(daoLinks.filter(link => link.removed == false))
+                setLinks(daoLinks.filter(link => link.removed == false && link.name != "" && link.url != ""))
                 if (daoName == "" || daoDescription == "") {
                     setDisabled(true)
                 }
@@ -39,11 +42,20 @@ export default function CreateDaoNContinueButton() {
                     setDisabled(false)
                 }
                 break;
+            case 3:
+                if (currency != "" && followAmount != "" && fundsRecipient != "") {
+                    setDisabled(false)
+                }
+                else {
+                    setDisabled(true)
+                }
+                break;
             default:
                 setDisabled(true)
                 break;
         }
-    }, [blockchainName, step, daoLinks, daoDescription, daoName, setLinks])
+    }, [blockchainName, step, daoLinks, daoDescription, daoName, currency, followAmount, fundsRecipient, setLinks])
+    //() => step + 1 !== 5 && step < 3 ? router.push(createDaoStepNavigation[step] || "") : router.push(createDaoStepNavigation[step+1] || "")
     return (
         <Button onClick={() => step + 1 !== 5 && router.push(createDaoStepNavigation[step] || "")}
             className="bg-green px-5 py-3.5 rounded-xl text-lighter-gray flex items-center gap-3" disabled={disabled}>Continue</Button>
