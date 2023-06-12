@@ -98,3 +98,34 @@ export interface RangeIndicatorProps {
     max: number,
     min: number
 }
+
+export interface DaoLinkType {
+    name: string,
+    url: string
+}
+
+export interface CreateDaoType {
+    blockchainName: string;
+    blockchainType: string;
+    daoName: string;
+    description: string;
+    logo: string;
+    links: {
+        name: string;
+        url: string;
+    }[];
+    followSettings: {
+        currency: string;
+        followAmount: number;
+        receipient: string;
+    };
+    governanceSettings: {
+        quorum: number,
+        minimumParticipation: number,
+        days: number,
+        hours: number,
+        minutes: number,
+        earlyExecution: string,
+        voteChange: string
+    };
+}

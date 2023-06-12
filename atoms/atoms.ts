@@ -138,7 +138,9 @@ export const voteChangeAtom = atom({
 export const createDaoAtom = atom({
     key: "createDaoAtom",
     default: {
-        name: "",
+        blockchainName: "",
+        blockchainType: "mainnet",
+        daoName: "",
         description: "",
         logo: "",
         links: [
