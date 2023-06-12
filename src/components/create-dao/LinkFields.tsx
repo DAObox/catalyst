@@ -15,7 +15,7 @@ export default function LinkFields() {
             <div id="link-parent">
                 {
                     linksField.map((linkField, index) => (
-                        linkField.removed == false && <div key={index} id={`${index}-parent`}><LinkField index={index} name={linkField.name} url={linkField.url} /></div>
+                        linkField.removed == false && <LinkField key={index} index={index} name={linkField.name} url={linkField.url} />
                     ))
                 }
             </div>
