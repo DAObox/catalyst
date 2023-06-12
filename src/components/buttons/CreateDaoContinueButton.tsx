@@ -17,7 +17,7 @@ export default function CreateDaoNContinueButton() {
     const daoDescription = useRecoilValue(daoDescriptionAtom)
     const daoLogo = useRecoilValue(daoLogoUrlAtom)
     const daoLinks = useRecoilValue(linkFieldsAtom)
-    const [, setLinks] = useRecoilState(daoLinksAtom)
+    const [links, setLinks] = useRecoilState(daoLinksAtom)
     const router = useRouter()
     useEffect(() => {
         switch (step) {
@@ -31,7 +31,7 @@ export default function CreateDaoNContinueButton() {
                 break;
             case 2:
                 setLinks(daoLinks.filter(link => link.removed == false))
-                console.log(daoLinks)
+                console.log(links)
                 if (daoName == "" || daoDescription == "") {
                     setDisabled(true)
                 }
