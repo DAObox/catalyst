@@ -93,3 +93,8 @@ export interface LinkInputType {
     placeholder?: string,
     index: number
 }
+
+export interface RangeIndicatorProps {
+    max: number,
+    min: number
+}

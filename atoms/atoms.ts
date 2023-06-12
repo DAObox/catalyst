@@ -100,6 +100,31 @@ export const fundsRecipientAtom = atom({
     default: ""
 })
 
+export const quorumAtom = atom({
+    key: "quorumAtom",
+    default: 50
+})
+
+export const minimumParticipationControlAtom = atom({
+    key: "minimumParticipationControlAtom",
+    default: 10
+})
+
+export const daysAtom = atom({
+    key: "daysAtom",
+    default: 0
+})
+
+export const hoursAtom = atom({
+    key: "hoursAtom",
+    default: 0
+})
+
+export const minutesAtom = atom({
+    key: "minutesAtom",
+    default: 0
+})
+
 export const createDaoAtom = atom({
     key: "createDaoAtom",
     default: {
