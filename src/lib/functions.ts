@@ -53,3 +53,23 @@ export const handleInputTypeUrlChange = (e: React.ChangeEvent<HTMLInputElement>,
     setLinksField(newLinkFields)
     setInputValue(e.target.value);
 };
+
+export const getCurrency = (blockchain: string, setCurrency: SetterOrUpdater<string>) => {
+    switch (blockchain) {
+        case "Ethereum":
+            setCurrency("ETH")
+            return "ETH"
+        case "Polygon":
+            setCurrency("MATIC")
+            return "MATIC"
+        case "Mumbai":
+            setCurrency("MATIC")
+            return "MATIC"
+        case "Goerli":
+            setCurrency("GETH")
+            return "GETH"
+        default:
+            setCurrency("")
+            return ""
+    }
+}

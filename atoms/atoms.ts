@@ -85,6 +85,21 @@ export const daoLinksAtom  = atom({
     default: [{ name: "", url: "" }]
 })
 
+export const currencyAtom = atom({
+    key: "currencyAtom",
+    default: ""
+})
+
+export const followAmountAtom = atom({
+    key: "followAmountAtom",
+    default: ""
+})
+
+export const fundsRecipientAtom = atom({
+    key: "fundingRecipientAtom",
+    default: ""
+})
+
 export const createDaoAtom = atom({
     key: "createDaoAtom",
     default: {
