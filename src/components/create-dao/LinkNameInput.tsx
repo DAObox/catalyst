@@ -2,7 +2,7 @@ import { useRecoilState } from "recoil";
 import { linkFieldsAtom } from "atoms/atoms";
 import { type LinkInputType } from "typings/typings";
 import { useState } from "react";
-import { handleInputTypeTextChange } from "@/lib/functions";
+import { handleInputTypeNameChange } from "@/lib/functions";
 
 export default function LinkNameInput({ className, value, placeholder, index }: LinkInputType) {
     const [linksField, setLinksField] = useRecoilState(linkFieldsAtom)
@@ -14,7 +14,7 @@ export default function LinkNameInput({ className, value, placeholder, index }: 
             placeholder={placeholder}
             id={`${index}-name`}
             value={inputValue}
-            onChange={e => handleInputTypeTextChange(e, linksField, index, setLinksField, setInputValue)}
+            onChange={e => handleInputTypeNameChange(e, linksField, index, setLinksField, setInputValue)}
         /> 
     )
 }
