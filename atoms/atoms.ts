@@ -107,7 +107,7 @@ export const quorumAtom = atom({
 
 export const minimumParticipationControlAtom = atom({
     key: "minimumParticipationControlAtom",
-    default: 10
+    default: 50
 })
 
 export const daysAtom = atom({
@@ -141,16 +141,25 @@ export const createDaoAtom = atom({
         name: "",
         description: "",
         logo: "",
-        followSettings: {
-            currency: "",
-            followAmount: 0,
-            receipient: ""
-        },
         links: [
             {
                 name: "",
                 url: ""
             }
-        ]
+        ],
+        followSettings: {
+            currency: "",
+            followAmount: 0,
+            receipient: ""
+        },
+        governanceSettings: {
+            quorum: 0,
+            minimumParticipation: 0,
+            days: 0,
+            hours: 0,
+            minutes: 0,
+            earlyExecution: "yes",
+            voteChange: "yes"
+        }
     }
 })
