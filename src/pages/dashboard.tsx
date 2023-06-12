@@ -3,9 +3,9 @@ import Link from "next/link";
 import {
   Button
 } from "@material-tailwind/react";
-import DaoAccordion from "../../components/dao/dashboard/DaoAccordion";
-import Divider from "../../components/Divider";
-import Proposals from "../../components/dao/dashboard/Proposals";
+import DaoAccordion from "../components/dao/dashboard/DaoAccordion";
+import Divider from "../components/Divider";
+import Proposals from "../components/dao/dashboard/Proposals";
 import DaoAppShell from "@/components/dao/DaoAppShell";
 import TopDelegates from "@/components/dao/dashboard/TopDelegates";
 

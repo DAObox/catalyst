@@ -1,15 +1,15 @@
 /* eslint-disable @typescript-eslint/restrict-template-expressions */
 import DaoAppShell from "@/components/dao/DaoAppShell";
 import Image from "next/image"
-import MintTokenButton from "../../components/buttons/MintTokenButton"
-import MemberCardGrid from "../../components/dao/members/MemberCardGrid"
-import MembersFilter from "../../components/dao/members/MembersFilter"
+import MintTokenButton from "../components/buttons/MintTokenButton"
+import MemberCardGrid from "../components/dao/members/MemberCardGrid"
+import MembersFilter from "../components/dao/members/MembersFilter"
 import { MagnifyingGlassIcon } from "@heroicons/react/24/outline"
-import GridButton from "../../components/buttons/GridButton"
-import ListButton from "../../components/buttons/ListButton"
+import GridButton from "../components/buttons/GridButton"
+import ListButton from "../components/buttons/ListButton"
 import { useRecoilValue } from "recoil"
 import { listStyleAtom } from "atoms/atoms"
-import MemberCardList from "../../components/dao/members/MemberCardList"
+import MemberCardList from "../components/dao/members/MemberCardList"
 
 export default function Members() {
     const style = useRecoilValue(listStyleAtom)

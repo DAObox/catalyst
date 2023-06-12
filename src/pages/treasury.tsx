@@ -1,7 +1,7 @@
 import DaoAppShell from "@/components/dao/DaoAppShell";
 import TreasuryBalanceCard from "@/components/dao/treasury/TreasuryBalanceCard";
-import TokensList from "../../components/dao/treasury/TokensList";
-import LastTransactions from "../../components/dao/treasury/LastTransactions";
+import TokensList from "../components/dao/treasury/TokensList";
+import LastTransactions from "../components/dao/treasury/LastTransactions";
 
 export default function Treasury() {
     return(

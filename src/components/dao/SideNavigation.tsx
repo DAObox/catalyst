@@ -11,9 +11,6 @@ export default function SideNavigation() {
                         <Image src={"/logos/dao-d.png"} width={50} height={50} alt="logo" />
                     </Link>
                 </div>
-                <div>
-                    <Image src={"/logos/rect-lg.png"} width={50} height={50} alt="logo" />
-                </div>
             </div>
         </div>
     </div>

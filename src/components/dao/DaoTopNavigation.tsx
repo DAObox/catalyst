@@ -9,19 +9,19 @@ export default function DaoTopNavigation({ active }: DaoTopNavigationProps) {
         <div className="flex items-center justify-between text-white">
             <div className="flex-1 flex justify-between">
                 <div className={`flex space-x-5 flex-1 justify-center ${isOpen && "ml-40"}`}>
-                    <Link href={"/daos/dashboard"} className={`hover:text-green ${active === "" && "text-green"}`}>
+                    <Link href={"/dashboard"} className={`hover:text-green ${active === "" && "text-green"}`}>
                         Dashboard
                     </Link>
-                    <Link href={"/daos/governance"} className={`hover:text-green ${active === "governance" && "text-green"}`}>
+                    <Link href={"/governance"} className={`hover:text-green ${active === "governance" && "text-green"}`}>
                         Governance
                     </Link>
-                    <Link href={"/daos/treasury"} className={`hover:text-green ${active === "treasury" && "text-green"}`}>
+                    <Link href={"/treasury"} className={`hover:text-green ${active === "treasury" && "text-green"}`}>
                         Treasury
                     </Link>
-                    <Link href={"/daos/members"} className={`hover:text-green ${active === "members" && "text-green"}`}>
+                    <Link href={"/members"} className={`hover:text-green ${active === "members" && "text-green"}`}>
                         Members
                     </Link>
-                    <Link href={"/daos/settings"} className={`hover:text-green ${active === "settings" && "text-green"}`}>
+                    <Link href={"/settings"} className={`hover:text-green ${active === "settings" && "text-green"}`}>
                         Settings
                     </Link>
                 </div>                

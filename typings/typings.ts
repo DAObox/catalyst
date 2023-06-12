@@ -56,6 +56,7 @@ export interface VotersTabProps {
 export interface DaoAppShellProps {
     children: React.ReactNode,
     currentPage?: string
+    className?: string
 }
 
 export interface CreateDaoPageStatusProps {
@@ -64,4 +65,31 @@ export interface CreateDaoPageStatusProps {
 
 export interface CreateDaoStepProps {
     current: boolean
+}
+
+export interface CreateDaoPageStatusRangeProps {
+    page: number
+}
+
+export interface LinkFieldProps {
+    index: number,
+    name: string,
+    url: string,
+}
+
+export interface LinkFieldType {
+    name: string,
+    url: string,
+    removed: boolean
+}
+
+export interface BlockchainBlockProps {
+    name: string
+}
+
+export interface LinkInputType {
+    className: string,
+    value?: string,
+    placeholder?: string,
+    index: number
 }

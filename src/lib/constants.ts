@@ -48,3 +48,11 @@ export function votersTab(tab: string) {
         { name: 'Abstain', current: tab === 'abstain' },
     ]
 }
+
+export const createDaoStepNavigation = [
+    "/create-dao/select-blockchain",
+    "/create-dao/about-dao",
+    "/create-dao/connect-lens-profile",
+    "/create-dao/setup-superflow",
+    "/create-dao/governance"
+]
