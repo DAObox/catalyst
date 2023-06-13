@@ -7,10 +7,6 @@ export interface DaoCardProps {
     href: string
 }
 
-export interface DaoTopNavigationProps {
-    active: string
-}
-
 export interface DaoAccordionProps {
     totalSupply: number,
     price: number,
@@ -55,8 +51,17 @@ export interface VotersTabProps {
 
 export interface DaoAppShellProps {
     children: React.ReactNode,
-    currentPage?: string
     className?: string
+    currentPage: string
+    icon?: string,
+}
+
+export interface BreadDividerProps {
+    className?: string
+}
+
+export interface DaoSelectNavigationProps {
+    currentPage: string
 }
 
 export interface CreateDaoPageStatusProps {
