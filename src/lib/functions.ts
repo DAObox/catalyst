@@ -136,3 +136,8 @@ export function setCreateDaoData(blockchainName: string, daoName: string, daoDes
     setCreateDao(createDaoData)
     console.log(createDaoData)
 }
+
+export function getDaoId() {
+    const urlSearchParams = new URLSearchParams(window.location.search);
+    return urlSearchParams.get('id') || "";
+}

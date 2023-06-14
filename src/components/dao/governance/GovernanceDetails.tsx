@@ -1,4 +1,4 @@
-import ActiveBadge from "@/components/buttons/ActiveBadge";
+import ActiveBadge from "@/components/ActiveBadge";
 import CopyButton from "@/components/buttons/CopyButton";
 import { truncate, truncateAddress } from "@/lib/functions";
 import Link from "next/link";

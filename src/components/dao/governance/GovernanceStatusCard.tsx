@@ -1,7 +1,7 @@
 import Dot from "@/components/dao/members/detail/activity/Dot";
 import { truncateAddress } from "@/lib/functions";
 import Link from "next/link";
-import ActiveBadge from "@/components/buttons/ActiveBadge";
+import ActiveBadge from "@/components/ActiveBadge";
 import CopyButton from "@/components/buttons/CopyButton";
 import GovernanceDivider from "./GovernanceDivider";
 

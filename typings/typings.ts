@@ -144,3 +144,8 @@ export interface BlockProps {
     className?: string,
     url?: string
 }
+
+export interface DaoOnSideProps {
+    url: string,
+    id: string
+}
