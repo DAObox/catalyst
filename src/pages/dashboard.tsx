@@ -19,8 +19,8 @@ export default function Dashboard({ icon }: DashnoardPageProps) {
                     </div>
                     <div className="flex items-center space-x-2.5">
                         <Block text="Polygon" className="bg-blue" url="/logos/polygon.png" />
-                        <Block text="Polygon" className="bg-trans-gray" />
-                        <Block text="Polygon" className="bg-trans-gray" />
+                        <Block text="Website" className="bg-trans-gray" />
+                        <Block text="Twitter" className="bg-trans-gray" />
                     </div>
                 </div>
                 <div className="w-full flex space-x-5">
