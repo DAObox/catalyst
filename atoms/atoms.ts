@@ -165,3 +165,8 @@ export const createDaoAtom = atom({
         }
     }
 })
+
+export const createProposalStepAtom = atom({
+    key: "createProposalAtom",
+    default: 1
+})
