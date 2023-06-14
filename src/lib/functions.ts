@@ -78,7 +78,7 @@ export const getCurrencyLogo = (blockchain: string) => {
     switch (blockchain) {
         case "Ethereum":
             return "/logos/ethereum.png"
-        case "Polygn":
+        case "Polygon":
             return "/logos/polygon.png"
         case "Mumbai":
             return "/logos/polygon.png"
