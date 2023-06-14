@@ -1,3 +1,5 @@
+import { type SetterOrUpdater } from "recoil"
+
 export interface CustomOptionsProps {
     label: string,
     icon: string,
@@ -97,6 +99,8 @@ export interface LinkInputType {
     value?: string,
     placeholder?: string,
     index: number
+    linksField: LinkFieldType[],
+    setLinksField: SetterOrUpdater<LinkFieldType[]>,
 }
 
 export interface RangeIndicatorProps {

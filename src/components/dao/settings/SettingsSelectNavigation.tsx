@@ -8,7 +8,7 @@ export default function SettingsSelectNavigation() {
             <label tabIndex={0} className="bg-transparent border-0 hover:cursor-pointer">
                 <div className="flex items-center space-x-1.5">
                     <div className='bg-blue p-1 rounded-sm'>
-                        <Image src={"/dashboard.png"} width={12} height={12} alt="icon" />
+                        <Image src={"/settings.png"} width={12} height={12} alt="icon" />
                     </div>
                     <div>
                         <p className="font-medium text-lighter-gray">Settings</p>
@@ -63,7 +63,7 @@ export default function SettingsSelectNavigation() {
                 <Link href="/settings">
                     <button className="flex items-center space-x-1.5 p-2.5 active:bg-base-100/5 hover:bg-base-100/5 w-full rounded-lg">
                         <div className='bg-blue p-1 rounded-sm shrink-0'>
-                            <Image src={"/dashboard.png"} width={12} height={12} alt="icon" />
+                            <Image src={"/settings.png"} width={12} height={12} alt="icon" />
                         </div>
                         <div>
                             <p className="font-medium text-lighter-gray">Settings</p>

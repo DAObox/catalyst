@@ -1,15 +1,14 @@
 /* eslint-disable @typescript-eslint/restrict-template-expressions */
 import { Footer } from "@/components/Footer";
-import CreateDaoBackButton from "@/components/buttons/CreateDaoBackButton";
-import CreateDaoNContinueButton from "@/components/buttons/CreateDaoContinueButton";
 import  Head from "next/head";
 import SideNavigation from "../SideNavigation";
-import CreateDaoPageStatus from "../create-dao/CreateDaoPageStatus";
 import CreateDaoTopNavigation from "../create-dao/CreateDaoTopNavigation";
 import { createProposalStepAtom } from "atoms/atoms";
 import { useRecoilValue } from "recoil";
 import { type DaoAppShellProps } from "typings/typings";
 import CreateProposalsPageStatus from "./CreateProposalsPageStatus";
+import NewProposalBackButton from "@/components/buttons/NewProposalBackButton";
+import NewProposalContinueButton from "@/components/buttons/NewProposalContinueButton";
 
 export default function CreateNewProposalAppShell({ children, className }: DaoAppShellProps) {
     const page = useRecoilValue(createProposalStepAtom)
@@ -38,10 +37,10 @@ export default function CreateNewProposalAppShell({ children, className }: DaoAp
                                 </div>
                                 <div className="w-full flex justify-between">
                                     <div>
-                                        <CreateDaoBackButton />
+                                        <NewProposalBackButton />
                                     </div>
                                     <div>
-                                        <CreateDaoNContinueButton />
+                                        <NewProposalContinueButton />
                                     </div>
                                 </div>
                             </div>

@@ -170,3 +170,23 @@ export const createProposalStepAtom = atom({
     key: "createProposalAtom",
     default: 1
 })
+
+export const proposalLinkFieldsAtom = atom({
+    key: "proposalLinkFieldsAtom",
+    default: [{ name: "", url: "", removed: false }]
+})
+
+export const proposalTitle = atom({
+    key: "proposalTitle",
+    default: ""
+})
+
+export const proposalDescription = atom({
+    key: "proposalDescription",
+    default: ""
+})
+
+export const proposalLinks = atom({
+    key: "proposalLinks",
+    default: [{ name: "", url: "" }]
+})
