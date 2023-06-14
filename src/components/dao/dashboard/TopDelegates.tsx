@@ -23,7 +23,7 @@ export default function TopDelegates() {
                 <TopDelegate />
                 <TopDelegate />
             </div>
-            <Link href={"/daos/members"}>
+            <Link href={"/members"}>
                 <button className="text-light-black flex space-x-1 items-center group">
                     <div>
                         <p className="text-lg font-bold group-hover:text-green">All Members</p>
