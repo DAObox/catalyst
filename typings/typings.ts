@@ -134,3 +134,13 @@ export interface CreateDaoType {
         voteChange: string
     };
 }
+
+export interface DashnoardPageProps {
+    icon: string
+}
+
+export interface BlockProps {
+    text?: string,
+    className?: string,
+    url?: string
+}
