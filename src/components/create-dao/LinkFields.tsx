@@ -2,7 +2,7 @@ import PlusIcon from "@heroicons/react/24/solid/PlusIcon"
 import { Button } from "@material-tailwind/react"
 import LinkField from "./LinkField"
 import { useRecoilState } from "recoil";
-import { daoLinksAtom, linkFieldsAtom } from "atoms/atoms";
+import { linkFieldsAtom } from "atoms/atoms";
 import { handleCreateNewField } from "@/lib/functions";
 
 export default function LinkFields() {
