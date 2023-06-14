@@ -52,7 +52,7 @@ export interface VotersTabProps {
 export interface DaoAppShellProps {
     children: React.ReactNode,
     className?: string
-    currentPage: string
+    currentPage?: string
     icon?: string,
 }
 
