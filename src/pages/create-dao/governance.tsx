@@ -1,9 +1,9 @@
-import CreateDaoAppShell from "@/components/create-dao/CreateDaoAppShell";
-import DurationControl from "@/components/create-dao/DurationControl";
-import EarlyExecutionControl from "@/components/create-dao/EarlyExecutionControl";
-import MinimumParticipationControl from "@/components/create-dao/MinimumParticipationControl";
-import QuorumControl from "@/components/create-dao/QuorumControl";
-import VoteChangeControl from "@/components/create-dao/VoteChangeControl";
+import CreateDaoAppShell from "@/components/dao/create-dao/CreateDaoAppShell";
+import DurationControl from "@/components/dao/create-dao/DurationControl";
+import EarlyExecutionControl from "@/components/dao/create-dao/EarlyExecutionControl";
+import MinimumParticipationControl from "@/components/dao/create-dao/MinimumParticipationControl";
+import QuorumControl from "@/components/dao/create-dao/QuorumControl";
+import VoteChangeControl from "@/components/dao/create-dao/VoteChangeControl";
 import { createDaoStep } from "atoms/atoms";
 import { useRecoilState } from "recoil";
 
