@@ -190,3 +190,13 @@ export const proposalLinks = atom({
     key: "proposalLinks",
     default: [{ name: "", url: "" }]
 })
+
+export const startDateAtom = atom({
+    key: "startDate",
+    default: ""
+})
+
+export const endDateAtom = atom({
+    key: "endDate",
+    default: ""
+})
