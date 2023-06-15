@@ -6,7 +6,7 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
 import RadioInput from "@/components/RadioInput";
 import CreateNewProposalAppShell from "@/components/create-proposals/CreateNewProposalAppShell";
-import { createProposalStepAtom, endDateAtom, startDateAtom } from "atoms/atoms";
+import { createProposalStepAtom, endDateAtom, proposalVotingControlAtom, startDateAtom } from "atoms/atoms";
 import { type SetterOrUpdater, useRecoilState } from "recoil";
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
@@ -17,6 +17,7 @@ export default function CreateProposal() {
     const [, setStep] = useRecoilState(createProposalStepAtom)
     const [startDate, setStartDate] = useRecoilState(startDateAtom)
     const [endDate, setEndDate] = useRecoilState(endDateAtom)
+    const [voteControl, setVoteControl] = useRecoilState(proposalVotingControlAtom)
     const startRef: any = useRef(null)
     const endRef: any = useRef(null)
     setStep(2)
@@ -28,7 +29,9 @@ export default function CreateProposal() {
         <CreateNewProposalAppShell className="space-y-6">
             <div className="space-y-3">
                 <h2 className="text-2xl font-medium text-lighter-gray">Voting</h2>
-                <RadioInput placeholder="Yes, No, or Abstain" customFunction={() => {}} className="bg-gray-border p-4" />
+                <RadioInput placeholder="Yes, No, or Abstain" customFunction={() => {
+                    setVoteControl(!voteControl)
+                }} className="bg-gray-border p-4" />
             </div>
             <div className="space-y-3">
                 <h2 className="text-2xl font-medium text-lighter-gray">Start date</h2>

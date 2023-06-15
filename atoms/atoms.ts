@@ -191,6 +191,11 @@ export const proposalLinks = atom({
     default: [{ name: "", url: "" }]
 })
 
+export const proposalVotingControlAtom = atom({
+    key: "proposalVotingControlAtom",
+    default: false
+})
+
 export const startDateAtom = atom({
     key: "startDate",
     default: ""
