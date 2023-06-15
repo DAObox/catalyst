@@ -153,3 +153,13 @@ export interface DaoOnSideProps {
     url: string,
     id: string
 }
+
+export interface RadioInputProps {
+    placeholder: string,
+    customFunction: () => void,
+    className?: string
+}
+
+export interface DatePickerProps {
+    className?: string
+}

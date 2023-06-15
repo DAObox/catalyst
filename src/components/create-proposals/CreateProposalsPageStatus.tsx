@@ -1,6 +1,6 @@
 import { type CreateDaoPageStatusProps } from "typings/typings";
 import { useRecoilValue } from "recoil";
-import { createDaoStep } from "atoms/atoms";
+import { createProposalStepAtom } from "atoms/atoms";
 import { useRouter } from "next/router";
 import { newProposalStepNavigation } from "@/lib/constants";
 import CreateDaoPageStatusRange from "../dao/create-dao/CreateDaoPageStatusRange";
@@ -10,7 +10,7 @@ import AddAction from "./steps/AddAction";
 import ReviewProposal from "./steps/ReviewProposal";
 
 export default function CreateProposalsPageStatus({ page }: CreateDaoPageStatusProps) {
-    const step = useRecoilValue(createDaoStep)
+    const step = useRecoilValue(createProposalStepAtom)
     const router = useRouter()
     return (
         <div className="space-y-10">

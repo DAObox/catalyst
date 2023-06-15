@@ -2,14 +2,16 @@ import CreateNewProposalAppShell from "@/components/create-proposals/CreateNewPr
 import { handleCreateNewField } from "@/lib/functions";
 import { PlusIcon } from "@heroicons/react/24/solid";
 import { Button } from "@material-tailwind/react";
-import { proposalLinkFieldsAtom } from "atoms/atoms";
+import { createProposalStepAtom, proposalLinkFieldsAtom } from "atoms/atoms";
 import { useRecoilState } from "recoil";
 import ProposalLinkField from "../../components/create-proposals/ProposalLinkField";
 import InputTypeTitle from "@/components/dao/InputTypeTitle";
 import InputTypeDescription from "@/components/dao/InputTypeDescription";
 
-export default function CreateProposal() {
+export default function ProposalDetail() {
     const [linksField, setLinksField] = useRecoilState(proposalLinkFieldsAtom)
+    const [, setStep] = useRecoilState(createProposalStepAtom)
+    setStep(1)
     return (
         <CreateNewProposalAppShell className="space-y-6">
             <div className="space-y-3">

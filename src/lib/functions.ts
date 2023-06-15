@@ -68,6 +68,10 @@ export const handleInputTypeDescriptionChange = (e: React.ChangeEvent<HTMLTextAr
     setInputTitle(e.target.value);
 };
 
+export const handleRadioCheck = (isChecked: boolean, setIsChecked: Dispatch<SetStateAction<boolean>>) => {
+    setIsChecked(!isChecked)
+}
+
 export const getCurrency = (blockchain: string, setCurrency: SetterOrUpdater<string>) => {
     switch (blockchain) {
         case "Ethereum":

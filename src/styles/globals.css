@@ -35,3 +35,7 @@
     -webkit-appearance: none; 
     margin: 0; 
 }
+
+ input[type=radio].radio-green {
+    accent-color: #02AB76;
+}

@@ -23,54 +23,17 @@ export default function CreateDaoAccordion() {
                     <ChevronDownIcon className={`${!open && "rotate-180"} h-5 w-5 transition-transform text-white`} />
                 }>
                     <AccordionHeader onClick={() => handleOpen(1)} className="border-0">
-                    <p className="text-white text-base font-medium">Instruction</p>
-                </AccordionHeader>
-                <AccordionBody>
-                    <div className="h-20 w-full border border-white/50 rounded-xl flex justify-center p-5 space-x-14">
-                        <div className="flex flex-col items-center justify-center">
-                            <div className="w-fit flex items-center space-x-1">
-                                <div>
-                                    <p className="text-lg font-medium text-light-black">Total Supply</p>
-                                </div>
-                                <div>
-                                    <Tooltip content="More Information">
-                                        <QuestionMarkCircleIcon className="h-5 w-5 text-white hover:cursor-pointer" />
-                                    </Tooltip>
-                                </div>
-                            </div>
-                            <div>
-                                <p className="text-white font-semibold text-2xl">10,000,0000</p>
-                            </div>
+                        <p className="text-white text-base font-medium">Instruction</p>
+                    </AccordionHeader>
+                    <AccordionBody>
+                        <div className="h-20 w-full border border-white/50 rounded-xl flex justify-center p-5 space-x-14">
+                            Choose a Blockchain Platform:  Select a suitable blockchain platform.
+                            Define the Purpose and Scope: Determine the objectives and scope of your DAO.
+                            Connect Profile: Assign your dao profile. Governance Mechanism: Create a framework for voting, proposals, and decision-making.
                         </div>
-                        <div className="flex flex-col items-center justify-center">
-                            <div className="w-fit flex items-center space-x-1">
-                                <div>
-                                    <p className="text-lg font-medium text-light-black">ENS Price</p>
-                                </div>
-                            </div>
-                            <div>
-                                <p className="text-white font-semibold text-2xl">$2.01</p>
-                            </div>
-                        </div>
-                        <div className="flex flex-col items-center justify-center">
-                            <div className="w-fit flex items-center space-x-1">
-                                <div>
-                                    <p className="text-lg font-medium text-light-black">Total Minted</p>
-                                </div>
-                                <div>
-                                    <Tooltip content="More Information">
-                                        <QuestionMarkCircleIcon className="h-5 w-5 text-white hover:cursor-pointer" />
-                                    </Tooltip>
-                                </div>
-                            </div>
-                            <div>
-                                <p className="text-white font-semibold text-2xl">400,0000</p>
-                            </div>
-                        </div>
-                    </div>
-                </AccordionBody>
-            </Accordion>
-        </Fragment>
+                    </AccordionBody>
+                </Accordion>
+            </Fragment>
         </div >
     )
 }
