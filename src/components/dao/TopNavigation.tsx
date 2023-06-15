@@ -1,6 +1,6 @@
 import { Web3Button } from "@web3modal/react";
 
-export default function DaoTopNavigation() {
+export default function TopNavigation() {
     return (
         <div className="flex items-center justify-end text-white">
             <div className="flex justify-end z-20">

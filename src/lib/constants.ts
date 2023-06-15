@@ -56,3 +56,10 @@ export const createDaoStepNavigation = [
     "/create-dao/governance",
     "/create-dao/setup-superflow",
 ]
+
+export const newProposalStepNavigation = [
+    "/new-proposal/create-proposal",
+    "/new-proposal/proposal-detail",
+    "/new-proposal/add-action",
+    "/new-proposal/review-proposal",
+]

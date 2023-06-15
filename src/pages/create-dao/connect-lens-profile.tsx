@@ -1,4 +1,4 @@
-import CreateDaoAppShell from "@/components/create-dao/CreateDaoAppShell";
+import CreateDaoAppShell from "@/components/dao/create-dao/CreateDaoAppShell";
 import LensIcon from "@/components/icons/LensIcon";
 import { Button } from "@material-tailwind/react";
 import { createDaoStep } from "atoms/atoms";

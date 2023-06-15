@@ -1,8 +1,8 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
 /* eslint-disable @typescript-eslint/no-unsafe-argument */
-import CreateDaoAppShell from "@/components/create-dao/CreateDaoAppShell";
-import LinkFields from "@/components/create-dao/LinkFields";
+import CreateDaoAppShell from "@/components/dao/create-dao/CreateDaoAppShell";
+import LinkFields from "@/components/dao/create-dao/LinkFields";
 import { PlusIcon } from "@heroicons/react/24/solid";
 import { createDaoStep, daoDescriptionAtom, daoNameAtom, daoLogoLocalUrlAtom, daoLogoUrlAtom } from "atoms/atoms";
 import Image from "next/image";

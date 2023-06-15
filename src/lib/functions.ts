@@ -54,6 +54,20 @@ export const handleInputTypeUrlChange = (e: React.ChangeEvent<HTMLInputElement>,
     setInputValue(e.target.value);
 };
 
+export const handleInputTypeTitleChange = (e: React.ChangeEvent<HTMLInputElement>, setTitle: SetterOrUpdater<string>, 
+    setInputTitle: Dispatch<SetStateAction<string>>) => {
+    const titleInput = document.getElementById("proposal-title") as HTMLInputElement;
+    setTitle(titleInput?.value)
+    setInputTitle(e.target.value);
+};
+
+export const handleInputTypeDescriptionChange = (e: React.ChangeEvent<HTMLTextAreaElement>, setTitle: SetterOrUpdater<string>, 
+    setInputTitle: Dispatch<SetStateAction<string>>) => {
+    const titleInput = document.getElementById("proposal-title") as HTMLTextAreaElement;
+    setTitle(titleInput?.value)
+    setInputTitle(e.target.value);
+};
+
 export const getCurrency = (blockchain: string, setCurrency: SetterOrUpdater<string>) => {
     switch (blockchain) {
         case "Ethereum":

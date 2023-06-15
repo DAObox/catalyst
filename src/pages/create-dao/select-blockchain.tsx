@@ -1,10 +1,10 @@
-import CreateDaoAccordion from "@/components/create-dao/CreateDaoAccordion";
-import CreateDaoAppShell from "@/components/create-dao/CreateDaoAppShell";
-import SelectBlockchainTabs from "../../components/create-dao/SelectBlockchainTabs";
+import CreateDaoAccordion from "@/components/dao/create-dao/CreateDaoAccordion";
+import CreateDaoAppShell from "@/components/dao/create-dao/CreateDaoAppShell";
+import SelectBlockchainTabs from "../../components/dao/create-dao/SelectBlockchainTabs";
 import { useRecoilState, useRecoilValue } from "recoil";
 import { createDaoStep, selectBlockchainTab } from "atoms/atoms";
-import Mainnet from "@/components/create-dao/Mainnet";
-import Testnet from "@/components/create-dao/Testnet";
+import Mainnet from "@/components/dao/create-dao/Mainnet";
+import Testnet from "@/components/dao/create-dao/Testnet";
 
 export default function SelectBlockchain() {
     const tab = useRecoilValue(selectBlockchainTab)

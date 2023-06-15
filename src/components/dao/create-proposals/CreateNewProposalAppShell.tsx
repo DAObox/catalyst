@@ -1,18 +1,18 @@
 /* eslint-disable @typescript-eslint/restrict-template-expressions */
-import SideNavigation from "@/components/dao/SideNavigation";
-import Head from "next/head";
 import { Footer } from "@/components/Footer";
-import { type DaoAppShellProps } from "typings/typings";
-import CreateDaoTopNavigation from "./CreateDaoTopNavigation";
-import CreateDaoPageStatus from "./CreateDaoPageStatus";
+import  Head from "next/head";
+import SideNavigation from "../SideNavigation";
+import CreateDaoTopNavigation from "../create-dao/CreateDaoTopNavigation";
+import { createProposalStepAtom } from "atoms/atoms";
 import { useRecoilValue } from "recoil";
-import { createDaoStep } from "atoms/atoms";
-import CreateDaoBackButton from "../buttons/CreateDaoBackButton";
-import CreateDaoNContinueButton from "../buttons/CreateDaoContinueButton";
+import { type DaoAppShellProps } from "typings/typings";
+import CreateProposalsPageStatus from "./CreateProposalsPageStatus";
+import NewProposalBackButton from "@/components/buttons/NewProposalBackButton";
+import NewProposalContinueButton from "@/components/buttons/NewProposalContinueButton";
 
-export default function CreateDaoAppShell({ children, className }: DaoAppShellProps) {
-    const page = useRecoilValue(createDaoStep)
-    return (
+export default function CreateNewProposalAppShell({ children, className }: DaoAppShellProps) {
+    const page = useRecoilValue(createProposalStepAtom)
+    return(
         <div>
             <Head>
                 <title>DAO</title>
@@ -29,7 +29,7 @@ export default function CreateDaoAppShell({ children, className }: DaoAppShellPr
                         <div className="w-full flex space-x-10">
                             <div className="max-w-56 space-y-4">
                                 <h2 className="font-bold text-2xl text-white">Create Your DAO</h2>
-                                <CreateDaoPageStatus page={page} />
+                                <CreateProposalsPageStatus page={page} />
                             </div>
                             <div className="flex-1 min-h-full space-y-10 flex flex-col justify-between">
                                 <div className={`h-full flex-1 ${className}`}>
@@ -37,10 +37,10 @@ export default function CreateDaoAppShell({ children, className }: DaoAppShellPr
                                 </div>
                                 <div className="w-full flex justify-between">
                                     <div>
-                                        <CreateDaoBackButton />
+                                        <NewProposalBackButton />
                                     </div>
                                     <div>
-                                        <CreateDaoNContinueButton />
+                                        <NewProposalContinueButton />
                                     </div>
                                 </div>
                             </div>
