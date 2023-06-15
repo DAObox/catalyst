@@ -4,7 +4,7 @@ import { voteAtom } from "atoms/atoms"
 import { useRecoilState } from "recoil"
 
 export default function Voting() {
-    const [_, setVote] = useRecoilState(voteAtom)
+    const [, setVote] = useRecoilState(voteAtom)
     return (
         <div className="w-full p-10 rounded-xl bg-gray border border-gray-border space-y-5">
             <h3 className="text-xl font-bold text-lighter-gray">Voting</h3>

@@ -1,8 +1,4 @@
-import ActiveBadge from "@/components/buttons/ActiveBadge";
-import CopyButton from "@/components/buttons/CopyButton";
-import { truncate, truncateAddress } from "@/lib/functions";
-import Link from "next/link";
-import Dot from "../members/detail/activity/Dot";
+import { truncate } from "@/lib/functions";
 import GovernanceDivider from "./GovernanceDivider";
 import { useState } from "react";
 

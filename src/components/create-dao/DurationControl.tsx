@@ -1,6 +1,5 @@
 import { MinusIcon, PlusIcon } from "@heroicons/react/24/solid";
 import { daysAtom, hoursAtom, minutesAtom } from "atoms/atoms";
-import { count } from "console";
 import { useRecoilState } from "recoil";
 
 export default function DurationControl() {

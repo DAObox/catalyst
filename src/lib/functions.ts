@@ -78,7 +78,7 @@ export const getCurrencyLogo = (blockchain: string) => {
     switch (blockchain) {
         case "Ethereum":
             return "/logos/ethereum.png"
-        case "Polygn":
+        case "Polygon":
             return "/logos/polygon.png"
         case "Mumbai":
             return "/logos/polygon.png"
@@ -135,4 +135,9 @@ export function setCreateDaoData(blockchainName: string, daoName: string, daoDes
     createDaoData.governanceSettings.voteChange = voteChange
     setCreateDao(createDaoData)
     console.log(createDaoData)
+}
+
+export function getDaoId() {
+    const urlSearchParams = new URLSearchParams(window.location.search);
+    return urlSearchParams.get('id') || "";
 }

@@ -10,7 +10,7 @@ export default function Proposals() {
                     <h2 className="text-2xl font-medium text-white">Proposals</h2>
                 </div>
                 <div>
-                    <Button className="bg-green px-5 py-4 rounded-xl text-white flex items-center gap-3">Create Proposals</Button>
+                    <Button className="bg-green px-5 py-4 rounded-xl text-white flex items-center gap-3">Create new Proposals</Button>
                 </div>
             </div>
             <div>
