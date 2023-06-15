@@ -1,10 +1,10 @@
-import CreateNewProposalAppShell from "@/components/dao/create-proposals/CreateNewProposalAppShell";
+import CreateNewProposalAppShell from "@/components/create-proposals/CreateNewProposalAppShell";
 import { handleCreateNewField } from "@/lib/functions";
 import { PlusIcon } from "@heroicons/react/24/solid";
 import { Button } from "@material-tailwind/react";
 import { proposalLinkFieldsAtom } from "atoms/atoms";
 import { useRecoilState } from "recoil";
-import ProposalLinkField from "./ProposalLinkField";
+import ProposalLinkField from "../../components/create-proposals/ProposalLinkField";
 import InputTypeTitle from "@/components/dao/InputTypeTitle";
 import InputTypeDescription from "@/components/dao/InputTypeDescription";
 

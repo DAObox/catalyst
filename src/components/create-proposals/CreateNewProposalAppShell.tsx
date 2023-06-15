@@ -1,8 +1,8 @@
 /* eslint-disable @typescript-eslint/restrict-template-expressions */
 import { Footer } from "@/components/Footer";
 import  Head from "next/head";
-import SideNavigation from "../SideNavigation";
-import CreateDaoTopNavigation from "../create-dao/CreateDaoTopNavigation";
+import SideNavigation from "../dao/SideNavigation";
+import CreateDaoTopNavigation from "../dao/create-dao/CreateDaoTopNavigation";
 import { createProposalStepAtom } from "atoms/atoms";
 import { useRecoilValue } from "recoil";
 import { type DaoAppShellProps } from "typings/typings";

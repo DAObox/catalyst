@@ -3,7 +3,7 @@ import { useRecoilValue } from "recoil";
 import { createDaoStep } from "atoms/atoms";
 import { useRouter } from "next/router";
 import { newProposalStepNavigation } from "@/lib/constants";
-import CreateDaoPageStatusRange from "../create-dao/CreateDaoPageStatusRange";
+import CreateDaoPageStatusRange from "../dao/create-dao/CreateDaoPageStatusRange";
 import CreateProposalStep from "./steps/CreateProposalStep";
 import ProposalDetail from "./steps/ProposalDetail";
 import AddAction from "./steps/AddAction";
