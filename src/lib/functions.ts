@@ -107,6 +107,19 @@ export const getCurrencyLogo = (blockchain: string) => {
     }
 }
 
+export const getLogoFromSymbol = (symbol: string) => {
+    switch (symbol) {
+        case "ETH":
+            return "/logos/ethereum.png"
+        case "MATIC":
+            return "/logos/polygon.png"
+        case "GETH":
+            return "/logos/ethereum.png"
+        default:
+            return ""
+    }
+}
+
 export function setCreateDaoData(blockchainName: string, daoName: string, daoDescription: string, daoLogo: string, links: DaoLinkType[],
     currency: string, followAmount: string, fundsRecipient: string, quorum: number, minimumParticipation: number, days: number,
     hours: number, minutes: number, earlyExecution: string, voteChange: string, blockchainType: string, setCreateDao: SetterOrUpdater<CreateDaoType>) {

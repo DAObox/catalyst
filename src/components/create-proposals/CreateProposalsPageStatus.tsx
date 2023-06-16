@@ -20,7 +20,8 @@ export default function CreateProposalsPageStatus({ page }: CreateDaoPageStatusP
                 <div className="space-y-5">
                     <CreateProposalStep current={step == 1 && router.pathname == newProposalStepNavigation[0] ? true : false} />
                     <ProposalDetail current={step == 2 && router.pathname == newProposalStepNavigation[1] ? true : false} />
-                    <AddAction current={step == 3 && router.pathname == newProposalStepNavigation[2] ? true : false} />
+                    <AddAction current={step == 3 && router.pathname == newProposalStepNavigation[2] || 
+                        router.pathname == newProposalStepNavigation[4] || router.pathname == newProposalStepNavigation[5] ? true : false} />
                     <ReviewProposal current={step == 4 && router.pathname == newProposalStepNavigation[3] ? true : false} />
                 </div>
             </div>

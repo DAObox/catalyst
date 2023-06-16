@@ -62,4 +62,22 @@ export const newProposalStepNavigation = [
     "/new-proposal/proposal-detail",
     "/new-proposal/add-action",
     "/new-proposal/review-proposal",
+    "/new-proposal/add-action/withdraw-asset",
+    "/new-proposal/add-action/mint"
+]
+
+
+export const currencies = [
+    {
+        id: 1, name: "Ethereum (ETH)", blockchain: "Ethereum"
+    },
+    {
+        id: 2, name: "Goerli (ETH)", blockchain: "Goerli"
+    },
+    {
+        id: 3, name: "Polygon (Matic)", blockchain: "Polygon"
+    },
+    {
+        id: 4, name: "Polygon Mumbai (Matic)", blockchain: "Mumbai"
+    }
 ]

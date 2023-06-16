@@ -205,3 +205,18 @@ export const endDateAtom = atom({
     key: "endDate",
     default: ""
 })
+
+export const selectCurrencyAtom = atom({
+    key: "selectCurrencyAtom",
+    default: "ETH"
+})
+
+export const createProposalRecepientAtom = atom({
+    key: "createProposalRecepientAtom",
+    default: ""
+})
+
+export const createProposalAmountAtom = atom({
+    key: "createProposalAmountAtom",
+    default: ""
+})
