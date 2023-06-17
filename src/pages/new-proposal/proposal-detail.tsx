@@ -31,7 +31,7 @@ export default function CreateProposal() {
                 <h2 className="text-2xl font-medium text-lighter-gray">Voting</h2>
                 <RadioInput placeholder="Yes, No, or Abstain" customFunction={() => {
                     setVoteControl(!voteControl)
-                }} className="bg-gray-border p-4" />
+                }} checked={voteControl} className="bg-gray-border p-4" />
             </div>
             <div className="space-y-3">
                 <h2 className="text-2xl font-medium text-lighter-gray">Start date</h2>
@@ -39,7 +39,7 @@ export default function CreateProposal() {
                 <div className="flex w-full space-x-5">
                     <RadioInput placeholder="Now" className="w-full bg-gray-border p-4" customFunction={() => {
                         setStartDate(date.toDateString())
-                    }} />
+                    }} checked={startDate == date.toDateString() ? true : false} />
                     <div className="relative w-full">
                         <CalendarDaysIcon className="w-6 h-6 absolute right-3.5 top-4 z-10 text-white hover:cursor-pointer" 
                         onClick={() => startRef.current?.setOpen(true)} />
@@ -55,7 +55,7 @@ export default function CreateProposal() {
                 <div className="flex w-full space-x-5">
                     <RadioInput placeholder="Now" className="w-full bg-gray-border p-4" customFunction={() => {
                         setEndDate(date.toDateString())
-                    }} />
+                    }} checked={endDate == date.toDateString() ? true : false} />
                     <div className="relative w-full">
                         <CalendarDaysIcon className="w-6 h-6 absolute right-3.5 top-4 z-10 text-white" 
                         onClick={() => endRef.current?.setOpen(true)}  />

@@ -157,7 +157,8 @@ export interface DaoOnSideProps {
 export interface RadioInputProps {
     placeholder: string,
     customFunction: () => void,
-    className?: string
+    className?: string,
+    checked: boolean
 }
 
 export interface DatePickerProps {

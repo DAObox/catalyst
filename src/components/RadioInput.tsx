@@ -3,8 +3,8 @@ import { useState } from "react";
 import { handleRadioCheck } from "../lib/functions"
 import { type RadioInputProps } from "typings/typings";
 
-export default function RadioInput({ placeholder, customFunction, className }: RadioInputProps) {
-    const [isChecked, setIsChecked] = useState(false)
+export default function RadioInput({ placeholder, customFunction, className, checked }: RadioInputProps) {
+    const [isChecked, setIsChecked] = useState(checked)
     return (
         <div className={`flex justify-between items-center rounded-md hover:cursor-pointer ${className}`} onClick={() => {
             handleRadioCheck(isChecked, setIsChecked)

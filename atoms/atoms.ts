@@ -220,3 +220,13 @@ export const createProposalAmountAtom = atom({
     key: "createProposalAmountAtom",
     default: ""
 })
+
+export const proposalActionTypeAtom = atom({
+    key: "setProposalActionTypeAtom",
+    default: "withdraw"
+})
+
+export const numberOfNftsAtom = atom({
+    key: "numberOfNftsAtom",
+    default: 1
+})

@@ -16,9 +16,6 @@ export default function AddActionButton() {
                 <li>
                     <Link href={"/new-proposal/add-action/withdraw-asset"} className="text-lighter-gray active:bg-base-100/5">Withdrawal</Link>
                 </li>
-                <li>
-                    <Link href={"/new-proposal/add-action/mint"} className="text-lighter-gray active:bg-base-100/5">Mint</Link>
-                </li>
             </div>
         </details>
     )
