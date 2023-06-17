@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-misused-promises */
 import { newProposalStepNavigation } from "@/lib/constants";
 import { Button } from "@material-tailwind/react";
-import { createProposalAmountAtom, createProposalRecepientAtom, createProposalStepAtom, currencyAtom, endDateAtom, proposalDescription, proposalLinkFieldsAtom, proposalLinks, proposalTitle, proposalVotingControlAtom, selectCurrencyAtom, startDateAtom } from "atoms/atoms";
+import { createProposalAmountAtom, createProposalRecepientAtom, createProposalStepAtom, endDateAtom, proposalDescription, proposalLinkFieldsAtom, proposalLinks, proposalTitle, proposalVotingControlAtom, selectCurrencyAtom, startDateAtom } from "atoms/atoms";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { useRecoilState, useRecoilValue } from "recoil";
