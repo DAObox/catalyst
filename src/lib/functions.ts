@@ -63,7 +63,7 @@ export const handleInputTypeTitleChange = (e: React.ChangeEvent<HTMLInputElement
 
 export const handleInputTypeDescriptionChange = (e: React.ChangeEvent<HTMLTextAreaElement>, setTitle: SetterOrUpdater<string>, 
     setInputTitle: Dispatch<SetStateAction<string>>) => {
-    const titleInput = document.getElementById("proposal-title") as HTMLTextAreaElement;
+    const titleInput = document.getElementById("proposal-description") as HTMLTextAreaElement;
     setTitle(titleInput?.value)
     setInputTitle(e.target.value);
 };

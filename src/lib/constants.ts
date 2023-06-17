@@ -66,7 +66,6 @@ export const newProposalStepNavigation = [
     "/new-proposal/add-action/mint"
 ]
 
-
 export const currencies = [
     {
         id: 1, name: "Ethereum (ETH)", blockchain: "Ethereum"
