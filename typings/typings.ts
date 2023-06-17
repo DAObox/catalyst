@@ -91,7 +91,8 @@ export interface LinkFieldType {
 }
 
 export interface BlockchainBlockProps {
-    name: string
+    name: string,
+    icon: string
 }
 
 export interface LinkInputType {

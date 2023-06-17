@@ -4,7 +4,7 @@ import Image from "next/legacy/image";
 import { useRecoilState } from "recoil";
 import { type BlockchainBlockProps } from "typings/typings";
 
-export default function BlockchainBlock({ name }: BlockchainBlockProps) {
+export default function BlockchainBlock({ name, icon }: BlockchainBlockProps) {
     const [selectedBlockchain, setSelectedBlockchain] = useRecoilState(selectedBlockchainName)
     return(
         <button className={`w-[150px] sm:w-[200px] min-h-[150px] sm:min-h-[200px] bg-gray border border-gray-border 
