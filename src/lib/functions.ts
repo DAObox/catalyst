@@ -54,6 +54,24 @@ export const handleInputTypeUrlChange = (e: React.ChangeEvent<HTMLInputElement>,
     setInputValue(e.target.value);
 };
 
+export const handleInputTypeTitleChange = (e: React.ChangeEvent<HTMLInputElement>, setTitle: SetterOrUpdater<string>, 
+    setInputTitle: Dispatch<SetStateAction<string>>) => {
+    const titleInput = document.getElementById("proposal-title") as HTMLInputElement;
+    setTitle(titleInput?.value)
+    setInputTitle(e.target.value);
+};
+
+export const handleInputTypeDescriptionChange = (e: React.ChangeEvent<HTMLTextAreaElement>, setTitle: SetterOrUpdater<string>, 
+    setInputTitle: Dispatch<SetStateAction<string>>) => {
+    const titleInput = document.getElementById("proposal-description") as HTMLTextAreaElement;
+    setTitle(titleInput?.value)
+    setInputTitle(e.target.value);
+};
+
+export const handleRadioCheck = (isChecked: boolean, setIsChecked: Dispatch<SetStateAction<boolean>>) => {
+    setIsChecked(!isChecked)
+}
+
 export const getCurrency = (blockchain: string, setCurrency: SetterOrUpdater<string>) => {
     switch (blockchain) {
         case "Ethereum":
@@ -83,6 +101,19 @@ export const getCurrencyLogo = (blockchain: string) => {
         case "Mumbai":
             return "/logos/polygon.png"
         case "Goerli":
+            return "/logos/ethereum.png"
+        default:
+            return ""
+    }
+}
+
+export const getLogoFromSymbol = (symbol: string) => {
+    switch (symbol) {
+        case "ETH":
+            return "/logos/ethereum.png"
+        case "MATIC":
+            return "/logos/polygon.png"
+        case "GETH":
             return "/logos/ethereum.png"
         default:
             return ""

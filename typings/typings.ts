@@ -1,3 +1,5 @@
+import { type SetterOrUpdater } from "recoil"
+
 export interface CustomOptionsProps {
     label: string,
     icon: string,
@@ -68,7 +70,7 @@ export interface CreateDaoPageStatusProps {
     page: number,
 }
 
-export interface CreateDaoStepProps {
+export interface StepProps {
     current: boolean
 }
 
@@ -89,7 +91,8 @@ export interface LinkFieldType {
 }
 
 export interface BlockchainBlockProps {
-    name: string
+    name: string,
+    icon: string
 }
 
 export interface LinkInputType {
@@ -97,6 +100,8 @@ export interface LinkInputType {
     value?: string,
     placeholder?: string,
     index: number
+    linksField: LinkFieldType[],
+    setLinksField: SetterOrUpdater<LinkFieldType[]>,
 }
 
 export interface RangeIndicatorProps {
@@ -148,4 +153,15 @@ export interface BlockProps {
 export interface DaoOnSideProps {
     url: string,
     id: string
+}
+
+export interface RadioInputProps {
+    placeholder: string,
+    customFunction: () => void,
+    className?: string,
+    checked: boolean
+}
+
+export interface DatePickerProps {
+    className?: string
 }

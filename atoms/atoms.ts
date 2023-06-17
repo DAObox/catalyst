@@ -165,3 +165,68 @@ export const createDaoAtom = atom({
         }
     }
 })
+
+export const createProposalStepAtom = atom({
+    key: "createProposalAtom",
+    default: 1
+})
+
+export const proposalLinkFieldsAtom = atom({
+    key: "proposalLinkFieldsAtom",
+    default: [{ name: "", url: "", removed: false }]
+})
+
+export const proposalTitle = atom({
+    key: "proposalTitle",
+    default: ""
+})
+
+export const proposalDescription = atom({
+    key: "proposalDescription",
+    default: ""
+})
+
+export const proposalLinks = atom({
+    key: "proposalLinks",
+    default: [{ name: "", url: "" }]
+})
+
+export const proposalVotingControlAtom = atom({
+    key: "proposalVotingControlAtom",
+    default: false
+})
+
+export const startDateAtom = atom({
+    key: "startDate",
+    default: ""
+})
+
+export const endDateAtom = atom({
+    key: "endDate",
+    default: ""
+})
+
+export const selectCurrencyAtom = atom({
+    key: "selectCurrencyAtom",
+    default: "ETH"
+})
+
+export const createProposalRecepientAtom = atom({
+    key: "createProposalRecepientAtom",
+    default: ""
+})
+
+export const createProposalAmountAtom = atom({
+    key: "createProposalAmountAtom",
+    default: ""
+})
+
+export const proposalActionTypeAtom = atom({
+    key: "setProposalActionTypeAtom",
+    default: "withdraw"
+})
+
+export const numberOfNftsAtom = atom({
+    key: "numberOfNftsAtom",
+    default: 1
+})

@@ -1,4 +1,4 @@
-import CreateDaoAppShell from "@/components/create-dao/CreateDaoAppShell";
+import CreateDaoAppShell from "@/components/dao/create-dao/CreateDaoAppShell";
 import { getCurrency, getCurrencyLogo } from "@/lib/functions";
 import { createDaoStep, currencyAtom, followAmountAtom, selectedBlockchainName, fundsRecipientAtom } from "atoms/atoms";
 import Image from "next/image";
