@@ -13,7 +13,7 @@ export default function BlockchainBlock({ name, icon }: BlockchainBlockProps) {
         }>
             <div className="flex flex-col items-center justify-center space-y-4">
                 <div>
-                    <Image src={"/logos/ethereum.png"} width={40} height={40} alt="icon" />
+                    <Image src={icon} width={40} height={40} alt="icon" />
                 </div>
                 <p className="font-medium text-lighter-gray text-xl">{name}</p>
             </div>
