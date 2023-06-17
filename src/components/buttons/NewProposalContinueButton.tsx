@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-misused-promises */
 import { newProposalStepNavigation } from "@/lib/constants";
 import { Button } from "@material-tailwind/react";
-import { createDaoStep, createProposalAmountAtom, createProposalRecepientAtom, createProposalStepAtom, currencyAtom, endDateAtom, proposalDescription, proposalLinkFieldsAtom, proposalLinks, proposalTitle, proposalVotingControlAtom, selectCurrencyAtom, startDateAtom } from "atoms/atoms";
+import { createProposalAmountAtom, createProposalRecepientAtom, createProposalStepAtom, currencyAtom, endDateAtom, proposalDescription, proposalLinkFieldsAtom, proposalLinks, proposalTitle, proposalVotingControlAtom, selectCurrencyAtom, startDateAtom } from "atoms/atoms";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { useRecoilState, useRecoilValue } from "recoil";
@@ -16,10 +16,8 @@ export default function NewProposalContinueButton() {
     const proposalVoteControl = useRecoilValue(proposalVotingControlAtom)
     const startDate = useRecoilValue(startDateAtom)
     const endDate = useRecoilValue(endDateAtom)
-    const votingControl = useRecoilValue(proposalVotingControlAtom)
     const start = useRecoilValue(startDateAtom)
     const end = useRecoilValue(endDateAtom)
-    const symbol = useRecoilValue(selectCurrencyAtom)
     const token = useRecoilValue(selectCurrencyAtom)
     const [finish, setFinish] = useState(false)
     const currency = useRecoilValue(selectCurrencyAtom)
