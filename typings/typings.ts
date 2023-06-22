@@ -1,167 +1,181 @@
-import { type SetterOrUpdater } from "recoil"
+import { UseQueryOptions } from "@tanstack/react-query";
+import { type SetterOrUpdater } from "recoil";
 
 export interface CustomOptionsProps {
-    label: string,
-    icon: string,
+  label: string;
+  icon: string;
 }
 
 export interface DaoCardProps {
-    href: string
+  href: string;
 }
 
 export interface DaoAccordionProps {
-    totalSupply: number,
-    price: number,
-    numberMinted: number
+  totalSupply: number;
+  price: number;
+  numberMinted: number;
 }
 
 export interface MembeStatProps {
-    balance: string,
-    power: string
+  balance: string;
+  power: string;
 }
 
 export interface VotingPowerProps {
-    power: string
+  power: string;
 }
 
 export interface TokenBalanceProps {
-    balance: string
+  balance: string;
 }
 
 export interface LastTransactionItemProps {
-    type: string
+  type: string;
 }
 
 export interface CopyButtonProps {
-    data: string
+  data: string;
 }
 
 export interface GovernanceStatusItemProps {
-    date: string,
-    type: string
+  date: string;
+  type: string;
 }
 
 export interface VoteHorizontalRangeProps {
-    _for: number,
-    against: number,
-    abstain: number
+  _for: number;
+  against: number;
+  abstain: number;
 }
 
 export interface VotersTabProps {
-    tab: { name: string, current: boolean }
+  tab: { name: string; current: boolean };
 }
 
 export interface DaoAppShellProps {
-    children: React.ReactNode,
-    className?: string
-    currentPage?: string
-    icon?: string,
+  children: React.ReactNode;
+  className?: string;
+  currentPage?: string;
+  icon?: string;
 }
 
 export interface BreadDividerProps {
-    className?: string
+  className?: string;
 }
 
 export interface DaoSelectNavigationProps {
-    currentPage: string
+  currentPage: string;
 }
 
 export interface CreateDaoPageStatusProps {
-    page: number,
+  page: number;
 }
 
 export interface StepProps {
-    current: boolean
+  current: boolean;
 }
 
 export interface CreateDaoPageStatusRangeProps {
-    page: number
+  page: number;
 }
 
 export interface LinkFieldProps {
-    index: number,
-    name: string,
-    url: string,
+  index: number;
+  name: string;
+  url: string;
 }
 
 export interface LinkFieldType {
-    name: string,
-    url: string,
-    removed: boolean
+  name: string;
+  url: string;
+  removed: boolean;
 }
 
 export interface BlockchainBlockProps {
-    name: string,
-    icon: string
+  name: string;
+  icon: string;
 }
 
 export interface LinkInputType {
-    className: string,
-    value?: string,
-    placeholder?: string,
-    index: number
-    linksField: LinkFieldType[],
-    setLinksField: SetterOrUpdater<LinkFieldType[]>,
+  className: string;
+  value?: string;
+  placeholder?: string;
+  index: number;
+  linksField: LinkFieldType[];
+  setLinksField: SetterOrUpdater<LinkFieldType[]>;
 }
 
 export interface RangeIndicatorProps {
-    max: number,
-    min: number
+  max: number;
+  min: number;
 }
 
 export interface DaoLinkType {
-    name: string,
-    url: string
+  name: string;
+  url: string;
 }
 
 export interface CreateDaoType {
-    blockchainName: string;
-    blockchainType: string;
-    daoName: string;
-    description: string;
-    logo: string;
-    links: {
-        name: string;
-        url: string;
-    }[];
-    followSettings: {
-        currency: string;
-        followAmount: number;
-        receipient: string;
-    };
-    governanceSettings: {
-        quorum: number,
-        minimumParticipation: number,
-        days: number,
-        hours: number,
-        minutes: number,
-        earlyExecution: string,
-        voteChange: string
-    };
+  blockchainName: string;
+  blockchainType: string;
+  daoName: string;
+  description: string;
+  logo: string;
+  links: {
+    name: string;
+    url: string;
+  }[];
+  followSettings: {
+    currency: string;
+    followAmount: number;
+    receipient: string;
+  };
+  governanceSettings: {
+    quorum: number;
+    minimumParticipation: number;
+    days: number;
+    hours: number;
+    minutes: number;
+    earlyExecution: string;
+    voteChange: string;
+  };
 }
 
 export interface DashnoardPageProps {
-    icon: string
+  icon: string;
 }
 
 export interface BlockProps {
-    text?: string,
-    className?: string,
-    url?: string
+  text?: string;
+  className?: string;
+  url?: string;
 }
 
 export interface DaoOnSideProps {
-    url: string,
-    id: string
+  url: string;
+  id: string;
 }
 
 export interface RadioInputProps {
-    placeholder: string,
-    customFunction: () => void,
-    className?: string,
-    checked: boolean
+  placeholder: string;
+  customFunction: () => void;
+  className?: string;
+  checked: boolean;
 }
 
 export interface DatePickerProps {
-    className?: string
+  className?: string;
 }
+
+export type QueryConfig<TData, TSelectData = TData> = Pick<
+  UseQueryOptions<TData, unknown, TSelectData>,
+  | "cacheTime"
+  | "enabled"
+  | "staleTime"
+  | "suspense"
+  | "onError"
+  | "onSettled"
+  | "onSuccess"
+  | "queryKey"
+  | "select"
+>;
