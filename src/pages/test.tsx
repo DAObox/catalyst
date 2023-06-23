@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unsafe-return */
 import Navbar from "@/components/Navbar";
 import type { NextPage } from "next";
 import { useFetchDaos } from "@/hooks/useFetchDaos";
@@ -57,7 +58,9 @@ const Test: NextPage = () => {
             </h3>
             {data && (
               <a
-                href={`https://app.aragon.org/#/daos/goerli/${data.daoAddress}/dashboard`}
+                href={`https://app.aragon.org/#/daos/goerli/${
+                  data.daoAddress as string
+                }/dashboard`}
               >
                 Goto Dao
               </a>

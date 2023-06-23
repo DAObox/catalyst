@@ -42,10 +42,10 @@ function useWindowSigner() {
     };
 
     const handleAccountsChanged = () => {
-      getSigner();
+      void getSigner();
     };
 
-    getSigner();
+    void getSigner();
 
     const ethereumWindow = window as EthereumWindow;
     if (ethereumWindow.ethereum) {
