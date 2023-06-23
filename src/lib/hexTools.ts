@@ -1,11 +1,14 @@
-export function bytesToHex(buff: Uint8Array, skip0x?: boolean): string {
+export function bytesToHex(buff?: Uint8Array, skip0x?: boolean): string {
   const bytes: string[] = [];
-  for (let i = 0; i < buff.length; i++) {
-    if (buff[i] >= 16) bytes.push(buff[i].toString(16));
-    else bytes.push("0" + buff[i].toString(16));
-  }
-  if (skip0x) return bytes.join("");
-  return "0x" + bytes.join("");
+
+  if (!buff) return (skip0x ? "" : "0x") + bytes.join("");
+
+  buff.forEach((byte) => {
+    const byteString = byte.toString(16);
+    bytes.push(byte >= 16 ? byteString : "0" + byteString);
+  });
+
+  return (skip0x ? "" : "0x") + bytes.join("");
 }
 
 export function hexToBytes(hexString: string): Uint8Array {
