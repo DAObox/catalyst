@@ -1,7 +1,9 @@
 import { type AppType } from "next/dist/shared/lib/utils";
 import "@/styles/globals.css";
 import { useEffect, useState } from "react";
+
 import { Providers } from "../contexts/providers";
+
 
 const MyApp: AppType = ({ Component, pageProps }) => {
   const [mounted, setMounted] = useState(false);
