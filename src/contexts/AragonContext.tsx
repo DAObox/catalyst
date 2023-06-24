@@ -33,6 +33,16 @@ export function AragonProvider({ children }: { children: React.ReactNode }) {
     const contextParams: ContextParams = {
       network: chain.id,
       signer: walletClient as unknown as Signer,
+
+      ipfsNodes: [
+        {
+          url: "https://testing-ipfs-0.aragon.network/api/v0",
+          headers: {
+            "X-API-KEY": "b477RhECf8s8sdM7XrkLBs2wHc4kCMwpbcFC55Kt",
+          },
+        },
+      ],
+
       ...(chain.id === 137 ? polygonParams : mumbaiParams),
     };
     const context: Context = new Context(contextParams);

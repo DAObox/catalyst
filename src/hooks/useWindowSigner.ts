@@ -40,13 +40,10 @@ function useWindowSigner() {
       // Parse the chainId as a hexadecimal number (base 16)
       setChain(parseInt(chainId, 16));
     };
-
     const handleAccountsChanged = () => {
-      getSigner();
+      void getSigner();
     };
-
-    getSigner();
-
+    void getSigner();
     const ethereumWindow = window as EthereumWindow;
     if (ethereumWindow.ethereum) {
       ethereumWindow.ethereum.on("chainChanged", handleChainChanged);
