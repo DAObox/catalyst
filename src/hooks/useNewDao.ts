@@ -3,11 +3,7 @@ import { useState } from "react";
 import { useMutation } from "@tanstack/react-query";
 
 import { useAragon } from "@/contexts/AragonContext";
-import {
-  type NewDaoParams,
-  type NewDaoReturnType,
-  NewDaoStatus,
-} from "typings/typings";
+import { type NewDaoParams, type NewDaoReturnType, NewDaoStatus } from "typings/typings";
 
 /**
  * @function useNewDao
@@ -28,9 +24,7 @@ export function useNewDao({
 }: NewDaoParams): NewDaoReturnType {
   const [daoAddress, setDaoAddress] = useState<string | null>(null);
   const [daoTxHash, setDaoTxHash] = useState<string | null>(null);
-  const [creationStatus, setCreationStatus] = useState<NewDaoStatus>(
-    NewDaoStatus.IDLE
-  );
+  const [creationStatus, setCreationStatus] = useState<NewDaoStatus>(NewDaoStatus.IDLE);
   const { baseClient: client } = useAragon();
 
   const createDao = async (newDaoParams: NewDaoParams) => {
@@ -40,9 +34,7 @@ export function useNewDao({
 
     try {
       setCreationStatus(NewDaoStatus.PINNING_METADATA);
-      const metadataUri = await client.methods.pinMetadata(
-        newDaoParams.daoMetadata
-      );
+      const metadataUri = await client.methods.pinMetadata(newDaoParams.daoMetadata);
       const steps = client.methods.createDao({ ...newDaoParams, metadataUri });
 
       for await (const step of steps) {

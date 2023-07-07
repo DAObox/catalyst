@@ -4,11 +4,11 @@ import { createProposalStepAtom } from "atoms/atoms";
 import { useRecoilState } from "recoil";
 
 export default function AddAction() {
-    const [, setStep] = useRecoilState(createProposalStepAtom)
-    setStep(3)
-    return(
-        <CreateNewProposalAppShell>
-            <AddActionButton />
-        </CreateNewProposalAppShell>
-    )
+  const [, setStep] = useRecoilState(createProposalStepAtom);
+  setStep(3);
+  return (
+    <CreateNewProposalAppShell>
+      <AddActionButton />
+    </CreateNewProposalAppShell>
+  );
 }

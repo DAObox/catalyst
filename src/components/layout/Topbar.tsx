@@ -8,12 +8,12 @@ interface TopbarProps {
 
 export function Topbar(props: TopbarProps) {
   const { setSidebarOpen } = props;
-//   const { openConnectModal } = useConnectModal();
+  //   const { openConnectModal } = useConnectModal();
   return (
-    <div className="bg-base-100/70 sticky top-0 z-40 flex h-20 shrink-0 items-center gap-x-4 px-4 shadow-sm backdrop-blur-md sm:gap-x-6 sm:px-6 lg:px-8 ">
+    <div className="sticky top-0 z-40 flex h-20 shrink-0 items-center gap-x-4 bg-base-100/70 px-4 shadow-sm backdrop-blur-md sm:gap-x-6 sm:px-6 lg:px-8 ">
       <button
         type="button"
-        className="text-primary -m-2.5 p-2.5 lg:hidden"
+        className="-m-2.5 p-2.5 text-primary lg:hidden"
         onClick={() => setSidebarOpen(true)}
       >
         <span className="sr-only">Open sidebar</span>
@@ -21,26 +21,23 @@ export function Topbar(props: TopbarProps) {
       </button>
 
       {/* Separator */}
-      <div className="h-6 w-px bg-gray-900/10 lg:hidden" aria-hidden="true" />
+      <div className="bg-gray-900/10 h-6 w-px lg:hidden" aria-hidden="true" />
 
       <div className="flex flex-1 justify-end gap-x-4 self-stretch lg:gap-x-6">
         <div className="flex items-center gap-x-4 lg:gap-x-2.5">
           <SwitchTheme />
 
           {/* Separator */}
-          <div
-            className="hidden lg:block lg:h-6 lg:w-px lg:bg-gray-900/10"
-            aria-hidden="true"
-          />
+          <div className="lg:bg-gray-900/10 hidden lg:block lg:h-6 lg:w-px" aria-hidden="true" />
 
           {/* RainbowKit Injector */}
           {/* {openConnectModal ? ( */}
-            <button
-              className="remove-text-transform btn-success btn-xs btn-md btn w-full text-white sm:w-auto"
+          <button
+            className="remove-text-transform btn-success btn-xs btn-md btn w-full text-white sm:w-auto"
             //   onClick={openConnectModal}
-            >
-              Connect Wallet
-            </button>
+          >
+            Connect Wallet
+          </button>
           {/* ) : (
             <ConnectButton />
           )} */}

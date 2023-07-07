@@ -6,10 +6,7 @@ type EthereumWindow = typeof window & {
     isMetaMask: boolean;
     request: (request: { method: string; params?: any[] }) => Promise<void>;
     on: (eventName: string, callback: (...args: any[]) => void) => void;
-    removeListener: (
-      eventName: string,
-      callback: (...args: any[]) => void
-    ) => void;
+    removeListener: (eventName: string, callback: (...args: any[]) => void) => void;
   };
 };
 
@@ -21,9 +18,7 @@ function useWindowSigner() {
     async function getSigner() {
       const ethereumWindow = window as EthereumWindow;
       if (ethereumWindow.ethereum) {
-        const provider = new ethers.providers.Web3Provider(
-          ethereumWindow.ethereum
-        );
+        const provider = new ethers.providers.Web3Provider(ethereumWindow.ethereum);
         const { chainId } = await provider.getNetwork();
         setChain(chainId);
         await ethereumWindow.ethereum.request({
@@ -52,14 +47,8 @@ function useWindowSigner() {
 
     return () => {
       if (ethereumWindow.ethereum) {
-        ethereumWindow.ethereum.removeListener(
-          "chainChanged",
-          handleChainChanged
-        );
-        ethereumWindow.ethereum.removeListener(
-          "accountsChanged",
-          handleAccountsChanged
-        );
+        ethereumWindow.ethereum.removeListener("chainChanged", handleChainChanged);
+        ethereumWindow.ethereum.removeListener("accountsChanged", handleAccountsChanged);
       }
     };
   }, []);

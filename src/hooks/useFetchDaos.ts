@@ -1,8 +1,4 @@
-import {
-  type Client,
-  type DaoListItem,
-  type IDaoQueryParams,
-} from "@aragon/sdk-client";
+import { type Client, type DaoListItem, type IDaoQueryParams } from "@aragon/sdk-client";
 import { useQuery, type UseQueryResult } from "@tanstack/react-query";
 import { type QueryConfig } from "typings/typings";
 import { useAragon } from "@/contexts/AragonContext";

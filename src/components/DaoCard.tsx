@@ -17,24 +17,17 @@ function CardHeader({ iconSrc, title }: CardHeaderProps) {
   );
 }
 
-function CardFooter({
-  memberCount,
-  proposalCount,
-  network,
-  networkIconSrc,
-}: CardFooterProps) {
+function CardFooter({ memberCount, proposalCount, network, networkIconSrc }: CardFooterProps) {
   return (
     <div className="mt-5 flex w-full items-center rounded-lg bg-info-bg/30">
       <div className="w-full px-1 py-2.5 text-center text-sm text-white md:p-2.5">
         <p>
-          <span>{memberCount}</span>{" "}
-          <span className="text-light-black">Members</span>
+          <span>{memberCount}</span> <span className="text-light-black">Members</span>
         </p>
       </div>
       <div className="w-full text-center text-sm text-white md:p-2.5">
         <p>
-          <span>{proposalCount}</span>{" "}
-          <span className="text-light-black">Proposals</span>
+          <span>{proposalCount}</span> <span className="text-light-black">Proposals</span>
         </p>
       </div>
       <div className="w-full rounded-r-full text-center text-sm text-white md:p-2.5">

@@ -1,10 +1,5 @@
 import { createContext, useContext, useEffect, useState } from "react";
-import {
-  Client,
-  Context,
-  TokenVotingClient,
-  type ContextParams,
-} from "@aragon/sdk-client";
+import { Client, Context, TokenVotingClient, type ContextParams } from "@aragon/sdk-client";
 import { type Signer } from "ethers";
 import { useNetwork } from "wagmi";
 
@@ -23,9 +18,9 @@ export function AragonProvider({ children }: { children: React.ReactNode }) {
   const { chain } = useNetwork();
   const [context, setContext] = useState<Context | undefined>(undefined);
   const [baseClient, setBaseClient] = useState<Client | undefined>(undefined);
-  const [tokenVotingClient, setTokenVotingClient] = useState<
-    TokenVotingClient | undefined
-  >(undefined);
+  const [tokenVotingClient, setTokenVotingClient] = useState<TokenVotingClient | undefined>(
+    undefined
+  );
 
   useEffect(() => {
     if (!walletClient || !chain) return;
@@ -69,8 +64,7 @@ export function AragonProvider({ children }: { children: React.ReactNode }) {
 
 export function useAragon(): AragonSDKContextValue {
   const context = useContext(AragonSDKContext);
-  if (!context)
-    throw new Error("useAragon hooks must be used within an AragonSDKWrapper");
+  if (!context) throw new Error("useAragon hooks must be used within an AragonSDKWrapper");
   return context;
 }
 

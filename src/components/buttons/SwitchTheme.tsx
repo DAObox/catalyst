@@ -20,7 +20,7 @@ export const SwitchTheme = () => {
       onClick={toggleTheme}
     >
       {theme === "lightmode" ? (
-        <SunIcon className="h-6 w-6 text-yellow-500 hover:cursor-pointer" />
+        <SunIcon className="text-yellow-500 h-6 w-6 hover:cursor-pointer" />
       ) : (
         <MoonIcon className="bg-daoboxg h-10 min-w-[40px] rounded-full p-2 text-black hover:cursor-pointer" />
       )}

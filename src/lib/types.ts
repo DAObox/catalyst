@@ -9,4 +9,3 @@ export interface CardFooterProps {
   network: string;
   networkIconSrc: string;
 }
-

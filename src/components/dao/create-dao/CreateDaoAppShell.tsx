@@ -11,46 +11,44 @@ import CreateDaoBackButton from "../../buttons/CreateDaoBackButton";
 import CreateDaoNContinueButton from "../../buttons/CreateDaoContinueButton";
 
 export default function CreateDaoAppShell({ children, className }: DaoAppShellProps) {
-    const page = useRecoilValue(createDaoStep)
-    return (
-        <div>
-            <Head>
-                <title>DAO</title>
-            </Head>
-            <main className="w-full min-h-screen flex relative">
-                <div className="w-24 fixed left-0 inset-y-0">
-                    <SideNavigation />
-                </div>
-                <div className="w-full min-h-screen bg-info-bg flex-1 flex flex-col items-center ml-24 space-y-5">
-                    <div className="w-full relative px-2.5 sm:px-0 lg:px-5 xl:px-0 max-w-xs sm:max-w-xl md:max-w-2xl lg:max-w-6xl space-y-[59px] pb-24">
-                        <div className="mt-6 w-full">
-                            <CreateDaoTopNavigation />
-                        </div>
-                        <div className="w-full flex space-x-10">
-                            <div className="max-w-56 space-y-4">
-                                <h2 className="font-bold text-2xl text-white">Create Your DAO</h2>
-                                <CreateDaoPageStatus page={page} />
-                            </div>
-                            <div className="flex-1 min-h-full space-y-10 flex flex-col justify-between">
-                                <div className={`h-full flex-1 ${className}`}>
-                                    {children}
-                                </div>
-                                <div className="w-full flex justify-between">
-                                    <div>
-                                        <CreateDaoBackButton />
-                                    </div>
-                                    <div>
-                                        <CreateDaoNContinueButton />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="px-2.5 sm:px-0 lg:px-5 xl:px-0 max-w-xs sm:max-w-xl md:max-w-2xl lg:max-w-6xl w-full absolute bottom-0">
-                        <Footer />
-                    </div>
-                </div>
-            </main>
+  const page = useRecoilValue(createDaoStep);
+  return (
+    <div>
+      <Head>
+        <title>DAO</title>
+      </Head>
+      <main className="relative flex min-h-screen w-full">
+        <div className="fixed inset-y-0 left-0 w-24">
+          <SideNavigation />
         </div>
-    )
+        <div className="ml-24 flex min-h-screen w-full flex-1 flex-col items-center space-y-5 bg-info-bg">
+          <div className="relative w-full max-w-xs space-y-[59px] px-2.5 pb-24 sm:max-w-xl sm:px-0 md:max-w-2xl lg:max-w-6xl lg:px-5 xl:px-0">
+            <div className="mt-6 w-full">
+              <CreateDaoTopNavigation />
+            </div>
+            <div className="flex w-full space-x-10">
+              <div className="max-w-56 space-y-4">
+                <h2 className="text-2xl font-bold text-white">Create Your DAO</h2>
+                <CreateDaoPageStatus page={page} />
+              </div>
+              <div className="flex min-h-full flex-1 flex-col justify-between space-y-10">
+                <div className={`h-full flex-1 ${className}`}>{children}</div>
+                <div className="flex w-full justify-between">
+                  <div>
+                    <CreateDaoBackButton />
+                  </div>
+                  <div>
+                    <CreateDaoNContinueButton />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="absolute bottom-0 w-full max-w-xs px-2.5 sm:max-w-xl sm:px-0 md:max-w-2xl lg:max-w-6xl lg:px-5 xl:px-0">
+            <Footer />
+          </div>
+        </div>
+      </main>
+    </div>
+  );
 }

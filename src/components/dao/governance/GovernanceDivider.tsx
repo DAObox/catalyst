@@ -1,3 +1,3 @@
 export default function GovernanceDivider() {
-    return <div className="w-full bg-medium-gray h-[1px]" />
+  return <div className="h-[1px] w-full bg-medium-gray" />;
 }

@@ -11,11 +11,7 @@ interface MobileNavProps {
 export function MobileNav({ sidebarOpen, setSidebarOpen }: MobileNavProps) {
   return (
     <Transition.Root show={sidebarOpen} as={Fragment}>
-      <Dialog
-        as="div"
-        className="relative z-50 lg:hidden"
-        onClose={setSidebarOpen}
-      >
+      <Dialog as="div" className="relative z-50 lg:hidden" onClose={setSidebarOpen}>
         <Transition.Child
           as={Fragment}
           enter="transition-opacity ease-linear duration-300"
@@ -25,7 +21,7 @@ export function MobileNav({ sidebarOpen, setSidebarOpen }: MobileNavProps) {
           leaveFrom="opacity-100"
           leaveTo="opacity-0"
         >
-          <div className="fixed inset-0 bg-gray-900/80" />
+          <div className="bg-gray-900/80 fixed inset-0" />
         </Transition.Child>
 
         <div className="fixed inset-0 flex">
@@ -55,10 +51,7 @@ export function MobileNav({ sidebarOpen, setSidebarOpen }: MobileNavProps) {
                     onClick={() => setSidebarOpen(false)}
                   >
                     <span className="sr-only">Close sidebar</span>
-                    <XMarkIcon
-                      className="text-primary h-6 w-6"
-                      aria-hidden="true"
-                    />
+                    <XMarkIcon className="h-6 w-6 text-primary" aria-hidden="true" />
                   </button>
                 </div>
               </Transition.Child>

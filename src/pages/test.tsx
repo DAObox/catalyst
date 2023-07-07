@@ -38,9 +38,7 @@ const Test: NextPage = () => {
               <Button
                 variant="outlined"
                 onClick={() => mutate?.()}
-                disabled={["pinningMetadata", "creatingDao"].includes(
-                  creationStatus
-                )}
+                disabled={["pinningMetadata", "creatingDao"].includes(creationStatus)}
               >
                 Deploy DAO
               </Button>
@@ -49,18 +47,12 @@ const Test: NextPage = () => {
             <h3>
               data:
               <pre>
-                {JSON.stringify(
-                  data,
-                  (_, v) => (typeof v === "bigint" ? v.toString() : v),
-                  2
-                )}
+                {JSON.stringify(data, (_, v) => (typeof v === "bigint" ? v.toString() : v), 2)}
               </pre>
             </h3>
             {data && (
               <a
-                href={`https://app.aragon.org/#/daos/goerli/${
-                  data.daoAddress as string
-                }/dashboard`}
+                href={`https://app.aragon.org/#/daos/goerli/${data.daoAddress as string}/dashboard`}
               >
                 Goto Dao
               </a>

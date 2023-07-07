@@ -4,24 +4,24 @@ import DaoOnSide from "./DaoOnSide";
 import AddDaoSideCircularButton from "../buttons/AddDaoSideCircularButton";
 
 export default function SideNavigation() {
-    return (
+  return (
     <div>
-        <div className="w-24 min-h-screen bg-ink border-r border-r-gray-border">
-            <div className="h-full flex flex-col items-center py-5 space-y-10">
-                <div>
-                    <Link href={"/"}>
-                        <Image src={"/logos/dao-d.png"} width={50} height={50} alt="logo" />
-                    </Link>
-                </div>
-                <div className="space-y-5">
-                    <DaoOnSide url="/logos/lens.png" id={""} />
-                    <DaoOnSide url="/logos/lens.png" id={"hehehehe"} />
-                    <DaoOnSide url="/logos/lens.png" id={"huhuhuhu"} />
-                    <DaoOnSide url="/logos/lens.png" id={"hahahaha"} />
-                    <AddDaoSideCircularButton />
-                </div>
-            </div>
+      <div className="min-h-screen w-24 border-r border-r-gray-border bg-ink">
+        <div className="flex h-full flex-col items-center space-y-10 py-5">
+          <div>
+            <Link href={"/"}>
+              <Image src={"/logos/dao-d.png"} width={50} height={50} alt="logo" />
+            </Link>
+          </div>
+          <div className="space-y-5">
+            <DaoOnSide url="/logos/lens.png" id={""} />
+            <DaoOnSide url="/logos/lens.png" id={"hehehehe"} />
+            <DaoOnSide url="/logos/lens.png" id={"huhuhuhu"} />
+            <DaoOnSide url="/logos/lens.png" id={"hahahaha"} />
+            <AddDaoSideCircularButton />
+          </div>
         </div>
+      </div>
     </div>
-    )
+  );
 }

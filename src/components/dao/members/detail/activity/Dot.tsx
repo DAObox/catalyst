@@ -1,5 +1,3 @@
 export default function Dot() {
-    return(
-        <div className="w-1 h-1 bg-light-gray rounded-full" />
-    )
+  return <div className="h-1 w-1 rounded-full bg-light-gray" />;
 }

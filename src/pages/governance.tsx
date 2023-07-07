@@ -8,23 +8,23 @@ import Voters from "@/components/dao/governance/voting/Voters";
 import Voting from "@/components/dao/governance/voting/Voting";
 
 export default function Governance() {
-    return (
-        <DaoAppShell currentPage="governance">
-            <div className="w-full space-y-10">
-                <GovernanceStatusCard />
-                <div className="flex space-x-5">
-                    <div className="flex-1 space-y-5">
-                        <GovernanceDetails />
-                        <Voting />
-                        <VoteHorizontalRange _for={67} against={12} abstain={21} />
-                        <AddComment />
-                    </div>
-                    <div className="max-w-xs w-full space-y-5">
-                        <GovernanceStatus />
-                        <Voters />
-                    </div>
-                </div>
-            </div>
-        </DaoAppShell>
-    )
+  return (
+    <DaoAppShell currentPage="governance">
+      <div className="w-full space-y-10">
+        <GovernanceStatusCard />
+        <div className="flex space-x-5">
+          <div className="flex-1 space-y-5">
+            <GovernanceDetails />
+            <Voting />
+            <VoteHorizontalRange _for={67} against={12} abstain={21} />
+            <AddComment />
+          </div>
+          <div className="w-full max-w-xs space-y-5">
+            <GovernanceStatus />
+            <Voters />
+          </div>
+        </div>
+      </div>
+    </DaoAppShell>
+  );
 }

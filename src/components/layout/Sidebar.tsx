@@ -3,12 +3,7 @@
 import { Cog6ToothIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 import logo from "../../../public/logos/daobox.png";
-import {
-  HomeIcon,
-  UsersIcon,
-  FolderIcon,
-  QueueListIcon,
-} from "@heroicons/react/24/outline";
+import { HomeIcon, UsersIcon, FolderIcon, QueueListIcon } from "@heroicons/react/24/outline";
 import { getWindow } from "../../lib/window";
 import Link from "next/link";
 import { classNames } from "@/lib/functions";
@@ -42,14 +37,9 @@ const navigation = [
 
 export function Sidebar() {
   return (
-    <div className="bg-secondary flex grow flex-col gap-y-5 overflow-y-auto px-6 pb-4">
+    <div className="flex grow flex-col gap-y-5 overflow-y-auto bg-secondary px-6 pb-4">
       <div className="flex h-16 shrink-0 items-center">
-        <Image
-          src={logo}
-          alt="DAOBox Logo"
-          width={300}
-          className="block h-8 w-auto"
-        />
+        <Image src={logo} alt="DAOBox Logo" width={300} className="block h-8 w-auto" />
       </div>
       <nav className="flex flex-1 flex-col">
         <ul role="list" className="flex flex-1 flex-col gap-y-7">
@@ -62,15 +52,13 @@ export function Sidebar() {
                     className={classNames(
                       item.current
                         ? "bg-daoboxg text-black"
-                        : "text-primary hover:bg-daoboxg hover:text-black",
+                        : "hover:bg-daoboxg text-primary hover:text-black",
                       "group flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6"
                     )}
                   >
                     <item.icon
                       className={classNames(
-                        item.current
-                          ? "text-black"
-                          : "text-primary group-hover:text-black",
+                        item.current ? "text-black" : "text-primary group-hover:text-black",
                         "h-6 w-6 shrink-0"
                       )}
                       aria-hidden="true"
@@ -84,10 +72,10 @@ export function Sidebar() {
           <li className="mt-auto">
             <Link
               href="#"
-              className="text-primary hover:bg-daoboxg hover:text-primary group -mx-2 flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6"
+              className="hover:bg-daoboxg group -mx-2 flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6 text-primary hover:text-primary"
             >
               <Cog6ToothIcon
-                className="text-primary group-hover:text-primary h-6 w-6 shrink-0"
+                className="h-6 w-6 shrink-0 text-primary group-hover:text-primary"
                 aria-hidden="true"
               />
               Settings

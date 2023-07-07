@@ -1,12 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 
 import { useState } from "react";
-import {
-  CalendarIcon,
-  FolderIcon,
-  HomeIcon,
-  UsersIcon,
-} from "@heroicons/react/24/outline";
+import { CalendarIcon, FolderIcon, HomeIcon, UsersIcon } from "@heroicons/react/24/outline";
 
 import { MobileNav } from "./MobileNav";
 import { Topbar } from "./Topbar";
